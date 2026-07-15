@@ -1,14 +1,9 @@
-import Markdown from "@/components/Markdown";
-import { getAtlas } from "@/lib/content";
+import { MarkdownDoc } from "@/components/MarkdownDoc";
+import { getAtlas } from "@/lib/experiment";
 
+export const dynamic = "force-static";
 export const metadata = { title: "Atlas — eIDAS Wallet & QES Lab" };
 
 export default function AtlasPage() {
-  const md = getAtlas();
-  return (
-    <article>
-      <div className="eyebrow">Atlas</div>
-      <Markdown>{md}</Markdown>
-    </article>
-  );
+  return <MarkdownDoc eyebrow="Atlas" content={getAtlas()} />;
 }

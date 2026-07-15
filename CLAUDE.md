@@ -71,7 +71,7 @@ Checks 2–6 are deterministic cryptography (AI-unbluffable). Checks 7–8 are t
 
 - **Python core** for issuer / verifier / eval (v1). Crypto via `cryptography`; no SSI or JWT libraries in Phase 1 — assemble and sign by hand. That is the point.
 - **TypeScript** arrives only with the PWA wallet (Phase 3.5) and is already the portal's language.
-- **Portal**: Next.js static export (`output: "export"`) in `portal/`, served by nginx on the VM. Same fabric as the bio-authn `portal-next`. Verified building on Next.js 15.5 / Node 22; bump to Next 16 to match the family (API unchanged 15→16).
+- **Portal**: Next.js 16 static export (`output: "export"`) in `portal/`, served by nginx on the VM. Built on the exact bio-authn `portal-next` stack — Tailwind v4, shadcn (base-nova), next-themes (dark-first), Space Grotesk / Inter / JetBrains Mono, the `AppShell` sidebar. Brand is `data-brand="eidas"`, violet accent. Type-checks clean against the family modules; production build runs on the VM at deploy.
 - Everything seeded and reproducible. The only outbound calls are the VLM (red-team, later phases) and one-time model/library downloads. Any other external call is a bug — flag it.
 
 ## Portal architecture
@@ -124,7 +124,7 @@ mdoc / ISO 18013-5 proximity flows. Production key management / HSMs. Real walle
 - Trilogy fusion (Hard Copy as issuer proofing, Face Value as unlock step-up) deferred to v2 behind the `WalletUnlockProvider` contract.
 - Flagship experiment: AI red-team vs the verifier; paired essay on agentic QES.
 - Python core (v1); TypeScript with the PWA (Phase 3.5).
-- Portal: Next.js static export at eidas.letsinvent.co.uk; EU-blue brand.
+- Portal: Next.js 16 static export at eidas.letsinvent.co.uk, on the portal-next stack (Tailwind v4 + shadcn + next-themes); violet brand (`data-brand="eidas"`, #8B5CF6 / #7C3AED), the third sibling accent after Face Value cyan and Hard Copy burgundy.
 
 ---
 

@@ -1,0 +1,13 @@
+# Caddy block for eidas.letsinvent.co.uk
+# Static export served from the portal's out/ directory.
+# Matches the bio-authn / bio-idv / webauth blocks already in the shared
+# /etc/caddy/Caddyfile on the VM — append this block there, don't replace the file.
+
+eidas.letsinvent.co.uk {
+    root * /var/www/eidas/out
+    file_server
+    header Cache-Control public, max-age=86400
+    header X-Frame-Options SAMEORIGIN
+    header X-Content-Type-Options nosniff
+    header Referrer-Policy strict-origin-when-cross-origin
+}

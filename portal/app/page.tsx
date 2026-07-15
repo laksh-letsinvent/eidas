@@ -1,12 +1,8 @@
-import Markdown from "@/components/Markdown";
-import { getExperiment } from "@/lib/content";
+import { MarkdownDoc } from "@/components/MarkdownDoc";
+import { getExperiment } from "@/lib/experiment";
+
+export const dynamic = "force-static";
 
 export default function Home() {
-  const md = getExperiment();
-  return (
-    <article>
-      <div className="eyebrow">The Experiment</div>
-      <Markdown>{md}</Markdown>
-    </article>
-  );
+  return <MarkdownDoc eyebrow="The Experiment" content={getExperiment()} />;
 }

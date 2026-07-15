@@ -1,11 +1,5 @@
 # Wallet & QES Lab — Project Brief
 
-Charter for the third learning build in the series (after Face Value and Hard Copy). This document seeds the new repo's CLAUDE.md. It lives here because the findings feed the Lara Bank IDV strategy; the code lives in its own repo.
-
-Working names: **Need to Know** (wallet track — selective disclosure is the point) and **Signed, Sealed** (QES track). Portal target: `wallet.letsinvent.co.uk`. Rename freely.
-
----
-
 ## Diagnosis
 
 By December 2027, every EU bank — including Lara Bank's Irish subsidiary — must accept EUDI Wallet credentials wherever it requires strong customer authentication. The UK is building the same capability on a different trust stack: GOV.UK Wallet issuing state credentials, DIATF/DVS-certified private providers verifying them. Both regimes make the bank a *relying party* whose core new component is a **verifier**: software that takes a credential presentation and decides accept/reject against a trust chain.

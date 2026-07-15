@@ -1,10 +1,5 @@
 # Atlas — EUDI Wallet, eIDAS 2.0 & Qualified Signatures
 
-> Domain and tech vocabulary for the Wallet & QES lab, EU side. Same rule as the bio-authn Atlas: definitions are written for a practitioner who already knows identity, not a newcomer. Tight, with the "why it matters" attached where it changes a design or verification decision.
->
-> Conventions: **Term** *(abbreviation)* — definition. Where a term is contested or evolving, the disagreement is named rather than smoothed. Regulatory and standards facts current as of July 2026. The verifier is the thing this lab builds, so entries lean toward "what a relying party's verifier must check" wherever that lens applies.
-
----
 
 ## 1. Regulation and the ecosystem
 

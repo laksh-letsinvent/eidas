@@ -1,168 +1,273 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Face Value design tokens */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border-c: var(--border-c);
+  --color-text-2: var(--text-2);
+  --color-text-3: var(--text-3);
+  --color-accent: var(--accent-c);
+  --color-accent-2: var(--accent-2);
+  --color-accept: var(--accept);
+  --color-uncertain: var(--uncertain);
+  --color-reject: var(--reject);
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  /* shadcn bridge */
+  --color-card: var(--surface);
+  --color-card-foreground: var(--foreground);
+  --color-popover: var(--surface);
+  --color-popover-foreground: var(--foreground);
+  --color-primary: var(--accent-c);
+  --color-primary-foreground: var(--background);
+  --color-secondary: var(--surface-2);
+  --color-secondary-foreground: var(--foreground);
+  --color-muted: var(--surface-2);
+  --color-muted-foreground: var(--text-2);
+  --color-border: var(--border-c);
+  --color-input: var(--surface-2);
+  --color-ring: var(--accent-c);
+  --color-destructive: var(--reject);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+}
+
 :root {
-  --eu-blue: #123c8c;
-  --eu-blue-deep: #0c2a63;
-  --eu-gold: #f4c20d;
-  --ink: #1a1d24;
-  --muted: #5b6472;
-  --line: #e3e7ee;
-  --bg: #ffffff;
-  --bg-soft: #f6f8fc;
-  --code-bg: #f2f4f9;
-  --max: 820px;
+  --background: #0A0D14;
+  --foreground: #E7ECF3;
+  --surface: #11161F;
+  --surface-2: #161C27;
+  --border-c: #222A37;
+  --text-2: #9BA6B5;
+  --text-3: #5E6A7A;
+  --accent-c: #38BDF8;
+  --accent-2: #818CF8;
+  --accept: #34D399;
+  --uncertain: #FBBF24;
+  --reject: #FB7185;
+  --accept-zone: rgba(52,211,153,.20);
+  --uncertain-zone: rgba(251,191,36,.18);
+  --reject-zone: rgba(251,113,133,.18);
+  --primary-glow: rgba(56,189,248,.45);
+  --primary-wash: rgba(56,189,248,.10);
+  --info-zone: rgba(56,189,248,.10);
+  --page-glow: radial-gradient(1100px 420px at 50% -12%, rgba(56,189,248,.08), transparent 70%);
+  --sidebar-w: 240px;
+  --radius: 0.625rem;
+  /* shadcn */
+  --card: var(--surface);
+  --card-foreground: var(--foreground);
+  --popover: var(--surface);
+  --popover-foreground: var(--foreground);
+  --primary: var(--accent-c);
+  --primary-foreground: var(--background);
+  --secondary: var(--surface-2);
+  --secondary-foreground: var(--foreground);
+  --muted: var(--surface-2);
+  --muted-foreground: var(--text-2);
+  --border: var(--border-c);
+  --input: var(--surface-2);
+  --ring: var(--accent-c);
+  --destructive: var(--reject);
 }
 
-* { box-sizing: border-box; }
-
-html { -webkit-text-size-adjust: 100%; }
-
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--ink);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif;
-  line-height: 1.65;
-  font-size: 17px;
+.light {
+  --background: #F7F9FC;
+  --foreground: #0F172A;
+  --surface: #FFFFFF;
+  --surface-2: #F1F4F9;
+  --border-c: #E2E8F0;
+  --text-2: #475569;
+  --text-3: #94A3B8;
+  --accent-c: #0284C7;
+  --accent-2: #6366F1;
+  --accept: #059669;
+  --uncertain: #D97706;
+  --reject: #E11D48;
+  --accept-zone: rgba(5,150,105,.12);
+  --uncertain-zone: rgba(217,119,6,.14);
+  --reject-zone: rgba(225,29,72,.10);
+  --primary-glow: rgba(2,132,199,.30);
+  --primary-wash: rgba(2,132,199,.10);
+  --info-zone: rgba(2,132,199,.10);
+  --page-glow: radial-gradient(1100px 420px at 50% -12%, rgba(2,132,199,.06), transparent 70%);
 }
 
-a { color: var(--eu-blue); text-decoration: none; }
-a:hover { text-decoration: underline; }
-
-/* Nav */
-.nav {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: var(--eu-blue);
-  border-bottom: 3px solid var(--eu-gold);
-}
-.nav-inner {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 24px;
-  height: 62px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-}
-.brand { display: flex; align-items: baseline; gap: 10px; color: #fff; }
-.brand:hover { text-decoration: none; }
-.brand-mark { font-weight: 800; letter-spacing: 0.5px; font-size: 19px; }
-.brand-sub { color: #c9d5f0; font-size: 13px; }
-.nav-links { display: flex; gap: 20px; flex-wrap: wrap; }
-.nav-links a { color: #dbe4f7; font-size: 14.5px; }
-.nav-links a:hover { color: #fff; text-decoration: none; }
-
-/* Page shell */
-.page {
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 48px 24px 72px;
-}
-.eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-size: 12.5px;
-  font-weight: 700;
-  color: var(--eu-blue);
-  margin-bottom: 12px;
-}
-.lede { font-size: 19px; color: var(--muted); max-width: 60ch; }
-.soon-tag {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 6px 14px;
-  background: var(--bg-soft);
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  font-size: 13px;
-  color: var(--muted);
-  font-weight: 600;
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    color-scheme: dark;
+  }
+  html.light {
+    color-scheme: light;
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    line-height: 1.2;
+  }
+  code, pre, .mono {
+    font-family: var(--font-mono);
+  }
 }
 
-/* Footer */
-.foot {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 28px 24px;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  font-size: 13.5px;
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
+/* ─── Hard Copy brand overrides (data-brand="hard-copy") ────────── */
+/* Use :root[attr] (specificity 0,2,0) to beat :root (0,1,0) and any
+   html.dark rules (0,1,1) that shadcn/next-themes may introduce. */
+:root[data-brand="hard-copy"] {
+  --accent-c: #C24A66;
+  --accent-2: #A855F7;
+  --primary-glow: rgba(194,74,102,.40);
+  --primary-wash: rgba(194,74,102,.10);
+  --info-zone: rgba(194,74,102,.10);
+  --page-glow: radial-gradient(1100px 420px at 50% -12%, rgba(194,74,102,.08), transparent 70%);
+}
+:root[data-brand="hard-copy"].light {
+  --accent-c: #9F1239;
+  --primary-glow: rgba(159,18,57,.30);
+  --primary-wash: rgba(159,18,57,.10);
+  --info-zone: rgba(159,18,57,.10);
+  --page-glow: radial-gradient(1100px 420px at 50% -12%, rgba(159,18,57,.05), transparent 70%);
 }
 
-/* Prose */
-.prose { color: var(--ink); }
+/* ─── Prose markdown ────────────────────────────────────────────── */
+.prose {
+  color: var(--foreground);
+}
 .prose h1 {
-  font-size: 33px;
-  line-height: 1.2;
-  margin: 8px 0 20px;
-  letter-spacing: -0.4px;
+  font-size: 1.9rem; font-weight: 700; margin: 2.5rem 0 1rem;
+  color: var(--foreground); font-family: var(--font-display);
 }
 .prose h2 {
-  font-size: 23px;
-  margin: 40px 0 14px;
-  padding-top: 14px;
-  border-top: 1px solid var(--line);
-  letter-spacing: -0.2px;
+  font-size: 1.35rem; font-weight: 600; margin: 2.25rem 0 0.75rem;
+  color: var(--foreground); font-family: var(--font-display);
+  border-bottom: 1px solid var(--border-c); padding-bottom: 0.5rem;
 }
-.prose h3 { font-size: 18.5px; margin: 28px 0 10px; }
-.prose p { margin: 14px 0; }
-.prose ul, .prose ol { margin: 14px 0; padding-left: 24px; }
-.prose li { margin: 6px 0; }
-.prose blockquote {
-  margin: 20px 0;
-  padding: 4px 18px;
-  border-left: 3px solid var(--eu-gold);
-  color: var(--muted);
-  background: var(--bg-soft);
-  border-radius: 0 6px 6px 0;
+.prose h3 {
+  font-size: 1.1rem; font-weight: 600; margin: 1.75rem 0 0.5rem;
+  color: var(--foreground); font-family: var(--font-display);
 }
+.prose h4 {
+  font-size: 0.95rem; font-weight: 600; margin: 1.25rem 0 0.4rem;
+  color: var(--text-2); text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.75rem;
+}
+.prose p {
+  margin: 0.9rem 0; line-height: 1.75;
+}
+.prose a {
+  color: var(--accent-c); text-decoration: underline;
+  text-underline-offset: 3px; text-decoration-thickness: 1px;
+}
+.prose a:hover { opacity: 0.8; }
+
+/* Bullet lists */
+.prose ul {
+  margin: 1rem 0 1rem 0; padding: 0;
+  list-style: none;
+}
+.prose ul > li {
+  position: relative; padding-left: 1.4rem; margin: 0.45rem 0;
+  line-height: 1.7;
+}
+.prose ul > li::before {
+  content: "▸";
+  position: absolute; left: 0;
+  color: var(--accent-c); font-size: 0.75rem; top: 0.18em;
+}
+.prose ul ul > li::before {
+  content: "·"; color: var(--text-3); top: 0.1em;
+}
+
+/* Ordered lists */
+.prose ol {
+  margin: 1rem 0; padding-left: 1.5rem;
+  counter-reset: prose-counter;
+  list-style: none;
+}
+.prose ol > li {
+  position: relative; padding-left: 1.6rem; margin: 0.45rem 0;
+  counter-increment: prose-counter; line-height: 1.7;
+}
+.prose ol > li::before {
+  content: counter(prose-counter) ".";
+  position: absolute; left: 0;
+  color: var(--accent-c); font-weight: 600; font-family: var(--font-mono);
+  font-size: 0.8rem; top: 0.12em;
+}
+
 .prose code {
-  background: var(--code-bg);
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-size: 0.88em;
-  font-family: "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+  font-family: var(--font-mono); font-size: 0.83em;
+  background: var(--surface-2); padding: 0.12em 0.45em;
+  border-radius: 4px; color: var(--accent-c);
+  border: 1px solid var(--border-c);
 }
 .prose pre {
-  background: var(--code-bg);
-  padding: 16px;
-  border-radius: 8px;
-  overflow-x: auto;
+  background: var(--surface-2); border: 1px solid var(--border-c);
+  border-radius: 10px; padding: 1.1rem 1.25rem; overflow-x: auto;
+  margin: 1.25rem 0;
 }
-.prose pre code { background: none; padding: 0; }
-.prose hr { border: none; border-top: 1px solid var(--line); margin: 36px 0; }
-.prose strong { font-weight: 700; }
-
-/* Tables */
+.prose pre code {
+  background: none; padding: 0; border: none; color: var(--foreground);
+}
 .prose table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-  font-size: 14.5px;
-  display: block;
-  overflow-x: auto;
+  width: 100%; border-collapse: collapse; margin: 1.25rem 0; font-size: 0.88rem;
+  overflow-x: auto; display: block;
 }
-.prose th, .prose td {
-  border: 1px solid var(--line);
-  padding: 9px 12px;
-  text-align: left;
-  vertical-align: top;
+.prose th {
+  background: var(--surface-2); text-align: left;
+  padding: 0.55rem 0.85rem; border: 1px solid var(--border-c); font-weight: 600;
+  font-family: var(--font-display); font-size: 0.8rem;
+  text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-2);
 }
-.prose thead th {
-  background: var(--eu-blue);
-  color: #fff;
-  font-weight: 600;
+.prose td {
+  padding: 0.5rem 0.85rem; border: 1px solid var(--border-c); vertical-align: top;
 }
-.prose tbody tr:nth-child(even) { background: var(--bg-soft); }
+.prose tr:nth-child(even) td { background: rgba(255,255,255,0.015); }
+.prose blockquote {
+  border-left: 3px solid var(--accent-c); padding: 0.6rem 1.1rem;
+  margin: 1.25rem 0; color: var(--text-2);
+  background: var(--primary-wash); border-radius: 0 8px 8px 0;
+}
+.prose strong { color: var(--foreground); font-weight: 600; }
+.prose em { color: var(--text-2); }
+.prose hr {
+  border: none; border-top: 1px solid var(--border-c); margin: 2rem 0;
+}
+/* SVG diagrams in markdown */
+.prose svg { max-width: 100%; height: auto; }
 
-@media (max-width: 640px) {
-  body { font-size: 16px; }
-  .brand-sub { display: none; }
-  .prose h1 { font-size: 27px; }
+/* ─── eIDAS brand (data-brand="eidas") — violet ─────────────────── */
+/* Third sibling to Face Value (cyan) and Hard Copy (burgundy).
+   Violet dodges the accept/uncertain/reject semantic hues. */
+:root[data-brand="eidas"] {
+  --accent-c: #8B5CF6;
+  --accent-2: #22D3EE;
+  --primary-glow: rgba(139,92,246,.42);
+  --primary-wash: rgba(139,92,246,.10);
+  --info-zone: rgba(139,92,246,.10);
+  --page-glow: radial-gradient(1100px 420px at 50% -12%, rgba(139,92,246,.09), transparent 70%);
+}
+:root[data-brand="eidas"].light {
+  --accent-c: #7C3AED;
+  --accent-2: #0891B2;
+  --primary-glow: rgba(124,58,237,.30);
+  --primary-wash: rgba(124,58,237,.10);
+  --info-zone: rgba(124,58,237,.10);
+  --page-glow: radial-gradient(1100px 420px at 50% -12%, rgba(124,58,237,.06), transparent 70%);
 }

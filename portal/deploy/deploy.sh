@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 # Build the eIDAS portal and publish it to the VM's web root.
 # Run from the portal/ directory. Assumes SSH access to the VM and that
-# nginx + certbot are already configured (see nginx-eidas.conf).
+# the eidas.letsinvent.co.uk block is already in the shared Caddyfile
+# (see Caddyfile-eidas — it's one block among several sibling portals
+# in /etc/caddy/Caddyfile, not a standalone config to install).
 #
 # Usage:
 #   ./deploy/deploy.sh user@vm-host
@@ -18,10 +20,10 @@ echo "==> Building static export"
 npm run build            # produces ./out
 
 echo "==> Syncing out/ to ${REMOTE}:${WEBROOT}/out"
-ssh "${REMOTE}" "sudo mkdir -p ${WEBROOT} && sudo chown -R \$(whoami) ${WEBROOT}"
+ssh "${REMOTE}" "mkdir -p ${WEBROOT}"
 rsync -az --delete out/ "${REMOTE}:${WEBROOT}/out/"
 
-echo "==> Reloading nginx"
-ssh "${REMOTE}" "sudo nginx -t && sudo systemctl reload nginx"
+echo "==> Reloading Caddy"
+ssh "${REMOTE}" "caddy reload --config /etc/caddy/Caddyfile"
 
 echo "==> Done. https://eidas.letsinvent.co.uk"
