@@ -1,0 +1,23 @@
+cryptography==49.0.0
+jsonschema==4.26.0
+pytest==9.1.1
+
+# Phase 3 only: eval/interop.py's cross-check against a reference SD-JWT
+# implementation. Not imported anywhere else — the hand-rolled core stays
+# the point.
+sd-jwt==0.10.4
+
+# Phase 3.5 only: local HTTP wrapper (service/) around the unchanged Phase 2
+# verifier, so the browser PWA has a real channel to call. Never deployed —
+# a local dev tool, not a production service.
+fastapi==0.141.1
+uvicorn==0.52.1
+httpx==0.28.1
+
+# Phase 4 only: PAdES (PDF signature) signing/verification. The CA chain
+# itself uses `cryptography` directly (already a dependency, hand-rolled —
+# that's the lesson); pyHanko wraps only the PDF/CMS embedding and
+# PAdES-specific validation, mature plumbing, not the point (see
+# docs/AES_VS_QES.md). Pulls in pyhanko_certvalidator/asn1crypto/tzlocal
+# transitively.
+pyhanko==0.36.2

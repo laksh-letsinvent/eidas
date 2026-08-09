@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eidas.letsinvent.co.uk/schemas/verification_result-wallet-1.0.json",
+  "title": "VerificationResult",
+  "description": "The per-presentation record the relying-party verifier emits (ATLAS_EUDI.md §9: format, issuer_signature, trust_path, revocation, disclosure_integrity, key_binding, registration_purpose, policy). Frozen contract #1 of the Wallet & QES lab — do not change without a scope decision. `qes` is null in the wallet track and is filled in by Phase 4.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "presentation_id",
+    "decision",
+    "checks",
+    "trust",
+    "policy_version",
+    "qes",
+    "timing"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "wallet-1.0"
+    },
+    "presentation_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "decision": {
+      "type": "string",
+      "enum": ["accept", "reject"]
+    },
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "result", "detail"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "enum": [
+              "format",
+              "issuer_signature",
+              "trust_path",
+              "revocation",
+              "disclosure_integrity",
+              "key_binding",
+              "registration_purpose",
+              "policy"
+            ]
+          },
+          "result": {
+            "type": "string",
+            "enum": ["pass", "fail", "skip"]
+          },
+          "detail": {
+            "type": ["string", "null"]
+          }
+        }
+      }
+    },
+    "trust": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tier", "anchor_id", "loa"],
+      "properties": {
+        "tier": {
+          "type": ["string", "null"],
+          "enum": ["PID", "QEAA", "PuB-EAA", "EAA", null]
+        },
+        "anchor_id": {
+          "type": ["string", "null"]
+        },
+        "loa": {
+          "type": ["string", "null"],
+          "enum": ["high", "substantial", "low", null]
+        }
+      }
+    },
+    "policy_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "qes": {
+      "description": "Phase 4 fill of the Phase-1-reserved slot (documented in docs/AES_VS_QES.md). null in the wallet/SD-JWT track (Phases 1-3.5, 5); a QES result object when this record accompanies a PAdES signature check (qes/verify_pades.py, Phase 4). Never both — a single VerificationResult is either a wallet presentation or a document-signature check, not both.",
+      "oneOf": [
+        { "type": "null" },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["signature_valid", "chain_trusted", "document_unmodified", "timestamp_valid", "is_qualified", "anchor_id"],
+          "properties": {
+            "signature_valid": { "type": "boolean" },
+            "chain_trusted": { "type": "boolean" },
+            "document_unmodified": { "type": "boolean" },
+            "timestamp_valid": { "type": ["boolean", "null"] },
+            "is_qualified": { "type": "boolean" },
+            "anchor_id": { "type": ["string", "null"] },
+            "detail": { "type": ["string", "null"] }
+          }
+        }
+      ]
+    },
+    "timing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["total_ms"],
+      "properties": {
+        "total_ms": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    }
+  }
+}

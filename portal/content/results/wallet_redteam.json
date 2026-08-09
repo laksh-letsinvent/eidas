@@ -1,0 +1,83 @@
+{
+  "schema_version": "redteam-1.0",
+  "agent": "heuristic-v1 (local, no LLM, $0)",
+  "generated_at_epoch": 1785600000,
+  "n_attempts": 4,
+  "attempts": [
+    {
+      "attempt_id": "redteam-001-forged-disclosure",
+      "targeted_check_family": "crypto",
+      "targeted_check": "disclosure_integrity",
+      "strategy": "alter a disclosed claim's value without the issuer's private key",
+      "accepted": false,
+      "decision": "reject",
+      "failing_checks": [
+        "disclosure_integrity"
+      ],
+      "tokens_in": null,
+      "tokens_out": null,
+      "cost_usd": 0.0,
+      "agent_notes": "no private key available to re-sign; expect the digest mismatch to be caught"
+    },
+    {
+      "attempt_id": "redteam-002-replayed-kb-jwt",
+      "targeted_check_family": "crypto",
+      "targeted_check": "key_binding",
+      "strategy": "replay a KB-JWT signed over a stale nonce instead of the verifier's fresh one",
+      "accepted": false,
+      "decision": "reject",
+      "failing_checks": [
+        "key_binding"
+      ],
+      "tokens_in": null,
+      "tokens_out": null,
+      "cost_usd": 0.0,
+      "agent_notes": "hoping nonce freshness isn't actually enforced"
+    },
+    {
+      "attempt_id": "redteam-003-over-ask-by-disclosure",
+      "targeted_check_family": "policy",
+      "targeted_check": "registration_purpose",
+      "strategy": "volunteer family_name \u2014 outside registration and unrequested \u2014 hoping only the DCQL query, not the actual disclosure, is checked",
+      "accepted": false,
+      "decision": "reject",
+      "failing_checks": [
+        "registration_purpose"
+      ],
+      "tokens_in": null,
+      "tokens_out": null,
+      "cost_usd": 0.0,
+      "agent_notes": "registration_purpose checks requested UNION revealed claims, so this is expected to fail \u2014 included to confirm that in numbers, not just by reading the code"
+    },
+    {
+      "attempt_id": "redteam-004-withhold-birthdate",
+      "targeted_check_family": "policy",
+      "targeted_check": "policy",
+      "strategy": "issue age_over_18=True for an actual minor, disclose only age_over_18, never birth_date \u2014 the consistency check has nothing to compare against",
+      "accepted": true,
+      "decision": "accept",
+      "failing_checks": [],
+      "tokens_in": null,
+      "tokens_out": null,
+      "cost_usd": 0.0,
+      "agent_notes": "selective disclosure is the credential's intended feature, not a bug being exploited \u2014 that's what makes this hole structural rather than an implementation slip"
+    }
+  ],
+  "by_check_family": {
+    "crypto": {
+      "n": 2,
+      "accepted": 0,
+      "success_rate": 0.0
+    },
+    "policy": {
+      "n": 2,
+      "accepted": 1,
+      "success_rate": 0.5
+    }
+  },
+  "token_accounting": {
+    "total_tokens_in": 0,
+    "total_tokens_out": 0,
+    "total_cost_usd": 0.0
+  }
+}

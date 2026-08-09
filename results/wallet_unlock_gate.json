@@ -1,0 +1,36 @@
+{
+  "species": "stolen_device_presentation",
+  "note": "checked before any presentation exists; not part of the eval-1.0 confusion matrix (see this module's docstring)",
+  "n": 4,
+  "all_blocked": true,
+  "attempts": [
+    {
+      "item_id": "stolen_device_presentation-000",
+      "unlock_authorized": false,
+      "unlock_reason": "webauthn gesture denied (stolen/locked device stub)",
+      "blocked": true,
+      "description": "WebAuthn release denied (device stolen/locked); no presentation was ever built"
+    },
+    {
+      "item_id": "stolen_device_presentation-001",
+      "unlock_authorized": false,
+      "unlock_reason": "webauthn gesture denied (stolen/locked device stub)",
+      "blocked": true,
+      "description": "WebAuthn release denied (device stolen/locked); no presentation was ever built"
+    },
+    {
+      "item_id": "stolen_device_presentation-002",
+      "unlock_authorized": false,
+      "unlock_reason": "webauthn gesture denied (stolen/locked device stub)",
+      "blocked": true,
+      "description": "WebAuthn release denied (device stolen/locked); no presentation was ever built"
+    },
+    {
+      "item_id": "stolen_device_presentation-003",
+      "unlock_authorized": false,
+      "unlock_reason": "webauthn gesture denied (stolen/locked device stub)",
+      "blocked": true,
+      "description": "WebAuthn release denied (device stolen/locked); no presentation was ever built"
+    }
+  ]
+}

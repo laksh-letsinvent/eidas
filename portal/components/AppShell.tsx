@@ -7,15 +7,17 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import {
   Menu, Sun, Moon, Monitor,
   BookOpen, Map, Workflow, FlaskConical, BarChart2,
-  Zap, FileText,
+  Zap, FileText, Wallet,
 } from "lucide-react";
 
 const EIDAS_NAV = [
   { href: "/",           label: "The Experiment", icon: BookOpen },
   { href: "/atlas",      label: "Atlas",          icon: Map },
-  { href: "/in-action",  label: "In Action",      icon: Workflow,     badge: "soon" },
-  { href: "/try-it",     label: "Try It",         icon: FlaskConical, badge: "soon" },
-  { href: "/results",    label: "Results",        icon: BarChart2,    badge: "soon" },
+  { href: "/in-action",  label: "In Action",      icon: Workflow },
+  { href: "/try-it",     label: "Try It",         icon: FlaskConical },
+  { href: "/results",    label: "Results",        icon: BarChart2 },
+  { href: "/essays",     label: "Essays",         icon: FileText },
+  { href: "/wallet",     label: "Wallet",         icon: Wallet,       badge: "new" },
 ];
 
 const BRAND = {

@@ -1,0 +1,187 @@
+{
+  "walkthroughs": [
+    {
+      "step_title": "Happy path",
+      "narration": "A PID issued to the wallet, requested by Lara Bank's verifier, presented revealing a subset of claims, and accepted \u2014 all eight checks pass in order.",
+      "result": {
+        "schema_version": "wallet-1.0",
+        "presentation_id": "pres-happy-001",
+        "decision": "accept",
+        "checks": [
+          {
+            "name": "format",
+            "result": "pass",
+            "detail": null
+          },
+          {
+            "name": "issuer_signature",
+            "result": "pass",
+            "detail": null
+          },
+          {
+            "name": "trust_path",
+            "result": "pass",
+            "detail": "anchor=eu-lab-anchor-1, tier=PID"
+          },
+          {
+            "name": "revocation",
+            "result": "pass",
+            "detail": null
+          },
+          {
+            "name": "disclosure_integrity",
+            "result": "pass",
+            "detail": null
+          },
+          {
+            "name": "key_binding",
+            "result": "pass",
+            "detail": null
+          },
+          {
+            "name": "registration_purpose",
+            "result": "pass",
+            "detail": null
+          },
+          {
+            "name": "policy",
+            "result": "pass",
+            "detail": null
+          }
+        ],
+        "trust": {
+          "tier": "PID",
+          "anchor_id": "eu-lab-anchor-1",
+          "loa": "high"
+        },
+        "policy_version": "lara-onboarding-v1",
+        "qes": null,
+        "timing": {
+          "total_ms": 0.25254208594560623
+        }
+      }
+    },
+    {
+      "step_title": "Tampered presentation",
+      "narration": "Defect injected: one bit flipped in the issuer JWT signature; payload/disclosures unchanged. A single bit flipped in the issuer signature.",
+      "result": {
+        "schema_version": "wallet-1.0",
+        "presentation_id": "pres-tampered-001",
+        "decision": "reject",
+        "checks": [
+          {
+            "name": "format",
+            "result": "pass",
+            "detail": null
+          },
+          {
+            "name": "issuer_signature",
+            "result": "fail",
+            "detail": "issuer JWT signature does not verify"
+          },
+          {
+            "name": "trust_path",
+            "result": "skip",
+            "detail": "skipped after an earlier hard-gate failure"
+          },
+          {
+            "name": "revocation",
+            "result": "skip",
+            "detail": "skipped after an earlier hard-gate failure"
+          },
+          {
+            "name": "disclosure_integrity",
+            "result": "skip",
+            "detail": "skipped after an earlier hard-gate failure"
+          },
+          {
+            "name": "key_binding",
+            "result": "skip",
+            "detail": "skipped after an earlier hard-gate failure"
+          },
+          {
+            "name": "registration_purpose",
+            "result": "skip",
+            "detail": "skipped after an earlier hard-gate failure"
+          },
+          {
+            "name": "policy",
+            "result": "skip",
+            "detail": "skipped after an earlier hard-gate failure"
+          }
+        ],
+        "trust": {
+          "tier": null,
+          "anchor_id": null,
+          "loa": null
+        },
+        "policy_version": "lara-onboarding-v1",
+        "qes": null,
+        "timing": {
+          "total_ms": 0.12199999764561653
+        }
+      }
+    },
+    {
+      "step_title": "Untrusted issuer",
+      "narration": "The same valid presentation, checked by a verifier with no trust registration for this issuer. issuer_signature still passes \u2014 the crypto is intact. trust_path is what fails: valid signature and trusted issuer are two different questions (ATLAS_EUDI.md \u00a711).",
+      "result": {
+        "schema_version": "wallet-1.0",
+        "presentation_id": "pres-untrusted-001",
+        "decision": "reject",
+        "checks": [
+          {
+            "name": "format",
+            "result": "pass",
+            "detail": null
+          },
+          {
+            "name": "issuer_signature",
+            "result": "pass",
+            "detail": null
+          },
+          {
+            "name": "trust_path",
+            "result": "fail",
+            "detail": "issuer 'https://pid-issuer.ie.eidas-lab.example' is not on any trusted list"
+          },
+          {
+            "name": "revocation",
+            "result": "skip",
+            "detail": "skipped after an earlier hard-gate failure"
+          },
+          {
+            "name": "disclosure_integrity",
+            "result": "skip",
+            "detail": "skipped after an earlier hard-gate failure"
+          },
+          {
+            "name": "key_binding",
+            "result": "skip",
+            "detail": "skipped after an earlier hard-gate failure"
+          },
+          {
+            "name": "registration_purpose",
+            "result": "skip",
+            "detail": "skipped after an earlier hard-gate failure"
+          },
+          {
+            "name": "policy",
+            "result": "skip",
+            "detail": "skipped after an earlier hard-gate failure"
+          }
+        ],
+        "trust": {
+          "tier": null,
+          "anchor_id": null,
+          "loa": null
+        },
+        "policy_version": "lara-onboarding-v1",
+        "qes": null,
+        "timing": {
+          "total_ms": 0.10304199531674385
+        }
+      }
+    }
+  ]
+}

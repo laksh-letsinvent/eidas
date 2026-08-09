@@ -1,2 +1,9 @@
 .DS_Store
 .obsidian/
+.venv/
+__pycache__/
+*.pyc
+out/
+
+# Claude Code local permissions (machine-specific)
+.claude/settings.local.json

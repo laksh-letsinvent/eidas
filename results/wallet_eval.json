@@ -1,0 +1,931 @@
+{
+  "schema_version": "eval-1.0",
+  "seed": 3,
+  "generated_at": "2026-08-01T16:00:00+00:00",
+  "corpus_size": 56,
+  "items": [
+    {
+      "item_id": "genuine-30000",
+      "species": "genuine",
+      "expected_decision": "accept",
+      "expected_check": null,
+      "actual_decision": "accept",
+      "actual_failing_checks": [],
+      "outcome_category": "accepted_correctly",
+      "total_ms": 0.21983403712511063
+    },
+    {
+      "item_id": "genuine-30001",
+      "species": "genuine",
+      "expected_decision": "accept",
+      "expected_check": null,
+      "actual_decision": "accept",
+      "actual_failing_checks": [],
+      "outcome_category": "accepted_correctly",
+      "total_ms": 0.2047908492386341
+    },
+    {
+      "item_id": "genuine-30002",
+      "species": "genuine",
+      "expected_decision": "accept",
+      "expected_check": null,
+      "actual_decision": "accept",
+      "actual_failing_checks": [],
+      "outcome_category": "accepted_correctly",
+      "total_ms": 0.19575003534555435
+    },
+    {
+      "item_id": "genuine-30003",
+      "species": "genuine",
+      "expected_decision": "accept",
+      "expected_check": null,
+      "actual_decision": "accept",
+      "actual_failing_checks": [],
+      "outcome_category": "accepted_correctly",
+      "total_ms": 0.19370787777006626
+    },
+    {
+      "item_id": "genuine-30004",
+      "species": "genuine",
+      "expected_decision": "accept",
+      "expected_check": null,
+      "actual_decision": "accept",
+      "actual_failing_checks": [],
+      "outcome_category": "accepted_correctly",
+      "total_ms": 0.19945786334574223
+    },
+    {
+      "item_id": "genuine-30005",
+      "species": "genuine",
+      "expected_decision": "accept",
+      "expected_check": null,
+      "actual_decision": "accept",
+      "actual_failing_checks": [],
+      "outcome_category": "accepted_correctly",
+      "total_ms": 0.18700002692639828
+    },
+    {
+      "item_id": "genuine-30006",
+      "species": "genuine",
+      "expected_decision": "accept",
+      "expected_check": null,
+      "actual_decision": "accept",
+      "actual_failing_checks": [],
+      "outcome_category": "accepted_correctly",
+      "total_ms": 0.18833321519196033
+    },
+    {
+      "item_id": "genuine-30007",
+      "species": "genuine",
+      "expected_decision": "accept",
+      "expected_check": null,
+      "actual_decision": "accept",
+      "actual_failing_checks": [],
+      "outcome_category": "accepted_correctly",
+      "total_ms": 0.19179098308086395
+    },
+    {
+      "item_id": "broken_issuer_signature-30008",
+      "species": "broken_issuer_signature",
+      "expected_decision": "reject",
+      "expected_check": "issuer_signature",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "issuer_signature"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.10799989104270935
+    },
+    {
+      "item_id": "broken_issuer_signature-30009",
+      "species": "broken_issuer_signature",
+      "expected_decision": "reject",
+      "expected_check": "issuer_signature",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "issuer_signature"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.0980838667601347
+    },
+    {
+      "item_id": "broken_issuer_signature-30010",
+      "species": "broken_issuer_signature",
+      "expected_decision": "reject",
+      "expected_check": "issuer_signature",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "issuer_signature"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.09949994273483753
+    },
+    {
+      "item_id": "broken_issuer_signature-30011",
+      "species": "broken_issuer_signature",
+      "expected_decision": "reject",
+      "expected_check": "issuer_signature",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "issuer_signature"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.09587500244379044
+    },
+    {
+      "item_id": "altered_disclosed_claim-30012",
+      "species": "altered_disclosed_claim",
+      "expected_decision": "reject",
+      "expected_check": "disclosure_integrity",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "disclosure_integrity"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.09799981489777565
+    },
+    {
+      "item_id": "altered_disclosed_claim-30013",
+      "species": "altered_disclosed_claim",
+      "expected_decision": "reject",
+      "expected_check": "disclosure_integrity",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "disclosure_integrity"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.09645801037549973
+    },
+    {
+      "item_id": "altered_disclosed_claim-30014",
+      "species": "altered_disclosed_claim",
+      "expected_decision": "reject",
+      "expected_check": "disclosure_integrity",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "disclosure_integrity"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.09512482210993767
+    },
+    {
+      "item_id": "altered_disclosed_claim-30015",
+      "species": "altered_disclosed_claim",
+      "expected_decision": "reject",
+      "expected_check": "disclosure_integrity",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "disclosure_integrity"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.09833299554884434
+    },
+    {
+      "item_id": "stripped_kb_jwt-30016",
+      "species": "stripped_kb_jwt",
+      "expected_decision": "reject",
+      "expected_check": "key_binding",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "key_binding"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.09024981409311295
+    },
+    {
+      "item_id": "stripped_kb_jwt-30017",
+      "species": "stripped_kb_jwt",
+      "expected_decision": "reject",
+      "expected_check": "key_binding",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "key_binding"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.0913750845938921
+    },
+    {
+      "item_id": "stripped_kb_jwt-30018",
+      "species": "stripped_kb_jwt",
+      "expected_decision": "reject",
+      "expected_check": "key_binding",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "key_binding"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.08929101750254631
+    },
+    {
+      "item_id": "stripped_kb_jwt-30019",
+      "species": "stripped_kb_jwt",
+      "expected_decision": "reject",
+      "expected_check": "key_binding",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "key_binding"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.08904188871383667
+    },
+    {
+      "item_id": "wrong_audience_kb_jwt-30020",
+      "species": "wrong_audience_kb_jwt",
+      "expected_decision": "reject",
+      "expected_check": "key_binding",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "key_binding"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.19145896658301353
+    },
+    {
+      "item_id": "wrong_audience_kb_jwt-30021",
+      "species": "wrong_audience_kb_jwt",
+      "expected_decision": "reject",
+      "expected_check": "key_binding",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "key_binding"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.18700002692639828
+    },
+    {
+      "item_id": "wrong_audience_kb_jwt-30022",
+      "species": "wrong_audience_kb_jwt",
+      "expected_decision": "reject",
+      "expected_check": "key_binding",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "key_binding"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.18670805729925632
+    },
+    {
+      "item_id": "wrong_audience_kb_jwt-30023",
+      "species": "wrong_audience_kb_jwt",
+      "expected_decision": "reject",
+      "expected_check": "key_binding",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "key_binding"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.1871669664978981
+    },
+    {
+      "item_id": "stale_nonce_kb_jwt-30024",
+      "species": "stale_nonce_kb_jwt",
+      "expected_decision": "reject",
+      "expected_check": "key_binding",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "key_binding"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.19370811060070992
+    },
+    {
+      "item_id": "stale_nonce_kb_jwt-30025",
+      "species": "stale_nonce_kb_jwt",
+      "expected_decision": "reject",
+      "expected_check": "key_binding",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "key_binding"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.18612504936754704
+    },
+    {
+      "item_id": "stale_nonce_kb_jwt-30026",
+      "species": "stale_nonce_kb_jwt",
+      "expected_decision": "reject",
+      "expected_check": "key_binding",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "key_binding"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.1860419288277626
+    },
+    {
+      "item_id": "stale_nonce_kb_jwt-30027",
+      "species": "stale_nonce_kb_jwt",
+      "expected_decision": "reject",
+      "expected_check": "key_binding",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "key_binding"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.1852919813245535
+    },
+    {
+      "item_id": "issuer_not_on_trusted_list-30028",
+      "species": "issuer_not_on_trusted_list",
+      "expected_decision": "reject",
+      "expected_check": "trust_path",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "trust_path"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.09404192678630352
+    },
+    {
+      "item_id": "issuer_not_on_trusted_list-30029",
+      "species": "issuer_not_on_trusted_list",
+      "expected_decision": "reject",
+      "expected_check": "trust_path",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "trust_path"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.09337486699223518
+    },
+    {
+      "item_id": "issuer_not_on_trusted_list-30030",
+      "species": "issuer_not_on_trusted_list",
+      "expected_decision": "reject",
+      "expected_check": "trust_path",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "trust_path"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.09358394891023636
+    },
+    {
+      "item_id": "issuer_not_on_trusted_list-30031",
+      "species": "issuer_not_on_trusted_list",
+      "expected_decision": "reject",
+      "expected_check": "trust_path",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "trust_path"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.09287497960031033
+    },
+    {
+      "item_id": "revoked_credential-30032",
+      "species": "revoked_credential",
+      "expected_decision": "reject",
+      "expected_check": "revocation",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "revocation"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.09725010022521019
+    },
+    {
+      "item_id": "revoked_credential-30033",
+      "species": "revoked_credential",
+      "expected_decision": "reject",
+      "expected_check": "revocation",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "revocation"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.09350012987852097
+    },
+    {
+      "item_id": "revoked_credential-30034",
+      "species": "revoked_credential",
+      "expected_decision": "reject",
+      "expected_check": "revocation",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "revocation"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.09341700933873653
+    },
+    {
+      "item_id": "revoked_credential-30035",
+      "species": "revoked_credential",
+      "expected_decision": "reject",
+      "expected_check": "revocation",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "revocation"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.09312503971159458
+    },
+    {
+      "item_id": "expired_credential-30036",
+      "species": "expired_credential",
+      "expected_decision": "reject",
+      "expected_check": "policy",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "policy"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.31841685995459557
+    },
+    {
+      "item_id": "expired_credential-30037",
+      "species": "expired_credential",
+      "expected_decision": "reject",
+      "expected_check": "policy",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "policy"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.19454210996627808
+    },
+    {
+      "item_id": "expired_credential-30038",
+      "species": "expired_credential",
+      "expected_decision": "reject",
+      "expected_check": "policy",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "policy"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.1890410203486681
+    },
+    {
+      "item_id": "expired_credential-30039",
+      "species": "expired_credential",
+      "expected_decision": "reject",
+      "expected_check": "policy",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "policy"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.19270810298621655
+    },
+    {
+      "item_id": "loa_below_requirement-30040",
+      "species": "loa_below_requirement",
+      "expected_decision": "reject",
+      "expected_check": "policy",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "policy"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.18900004215538502
+    },
+    {
+      "item_id": "loa_below_requirement-30041",
+      "species": "loa_below_requirement",
+      "expected_decision": "reject",
+      "expected_check": "policy",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "policy"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.19637495279312134
+    },
+    {
+      "item_id": "loa_below_requirement-30042",
+      "species": "loa_below_requirement",
+      "expected_decision": "reject",
+      "expected_check": "policy",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "policy"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.1884161029011011
+    },
+    {
+      "item_id": "loa_below_requirement-30043",
+      "species": "loa_below_requirement",
+      "expected_decision": "reject",
+      "expected_check": "policy",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "policy"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.18620886839926243
+    },
+    {
+      "item_id": "claim_inconsistency-30044",
+      "species": "claim_inconsistency",
+      "expected_decision": "reject",
+      "expected_check": "policy",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "policy"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.197333050891757
+    },
+    {
+      "item_id": "claim_inconsistency-30045",
+      "species": "claim_inconsistency",
+      "expected_decision": "reject",
+      "expected_check": "policy",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "policy"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.19566691480576992
+    },
+    {
+      "item_id": "claim_inconsistency-30046",
+      "species": "claim_inconsistency",
+      "expected_decision": "reject",
+      "expected_check": "policy",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "policy"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.19724993035197258
+    },
+    {
+      "item_id": "claim_inconsistency-30047",
+      "species": "claim_inconsistency",
+      "expected_decision": "reject",
+      "expected_check": "policy",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "policy"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.18991692923009396
+    },
+    {
+      "item_id": "over_asking-30048",
+      "species": "over_asking",
+      "expected_decision": "reject",
+      "expected_check": "registration_purpose",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "registration_purpose"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.18900004215538502
+    },
+    {
+      "item_id": "over_asking-30049",
+      "species": "over_asking",
+      "expected_decision": "reject",
+      "expected_check": "registration_purpose",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "registration_purpose"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.1882081851363182
+    },
+    {
+      "item_id": "over_asking-30050",
+      "species": "over_asking",
+      "expected_decision": "reject",
+      "expected_check": "registration_purpose",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "registration_purpose"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.1871660351753235
+    },
+    {
+      "item_id": "over_asking-30051",
+      "species": "over_asking",
+      "expected_decision": "reject",
+      "expected_check": "registration_purpose",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "registration_purpose"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.18708291463553905
+    },
+    {
+      "item_id": "cross_device_origin_phish-30052",
+      "species": "cross_device_origin_phish",
+      "expected_decision": "reject",
+      "expected_check": "key_binding",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "key_binding"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.1857501920312643
+    },
+    {
+      "item_id": "cross_device_origin_phish-30053",
+      "species": "cross_device_origin_phish",
+      "expected_decision": "reject",
+      "expected_check": "key_binding",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "key_binding"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.18558301962912083
+    },
+    {
+      "item_id": "cross_device_origin_phish-30054",
+      "species": "cross_device_origin_phish",
+      "expected_decision": "reject",
+      "expected_check": "key_binding",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "key_binding"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.18495810218155384
+    },
+    {
+      "item_id": "cross_device_origin_phish-30055",
+      "species": "cross_device_origin_phish",
+      "expected_decision": "reject",
+      "expected_check": "key_binding",
+      "actual_decision": "reject",
+      "actual_failing_checks": [
+        "key_binding"
+      ],
+      "outcome_category": "caught",
+      "total_ms": 0.1852500718086958
+    }
+  ],
+  "matrix": {
+    "genuine": {
+      "format": 0,
+      "issuer_signature": 0,
+      "trust_path": 0,
+      "revocation": 0,
+      "disclosure_integrity": 0,
+      "key_binding": 0,
+      "registration_purpose": 0,
+      "policy": 0,
+      "accept": 8
+    },
+    "broken_issuer_signature": {
+      "format": 0,
+      "issuer_signature": 4,
+      "trust_path": 0,
+      "revocation": 0,
+      "disclosure_integrity": 0,
+      "key_binding": 0,
+      "registration_purpose": 0,
+      "policy": 0,
+      "accept": 0
+    },
+    "altered_disclosed_claim": {
+      "format": 0,
+      "issuer_signature": 0,
+      "trust_path": 0,
+      "revocation": 0,
+      "disclosure_integrity": 4,
+      "key_binding": 0,
+      "registration_purpose": 0,
+      "policy": 0,
+      "accept": 0
+    },
+    "stripped_kb_jwt": {
+      "format": 0,
+      "issuer_signature": 0,
+      "trust_path": 0,
+      "revocation": 0,
+      "disclosure_integrity": 0,
+      "key_binding": 4,
+      "registration_purpose": 0,
+      "policy": 0,
+      "accept": 0
+    },
+    "wrong_audience_kb_jwt": {
+      "format": 0,
+      "issuer_signature": 0,
+      "trust_path": 0,
+      "revocation": 0,
+      "disclosure_integrity": 0,
+      "key_binding": 4,
+      "registration_purpose": 0,
+      "policy": 0,
+      "accept": 0
+    },
+    "stale_nonce_kb_jwt": {
+      "format": 0,
+      "issuer_signature": 0,
+      "trust_path": 0,
+      "revocation": 0,
+      "disclosure_integrity": 0,
+      "key_binding": 4,
+      "registration_purpose": 0,
+      "policy": 0,
+      "accept": 0
+    },
+    "issuer_not_on_trusted_list": {
+      "format": 0,
+      "issuer_signature": 0,
+      "trust_path": 4,
+      "revocation": 0,
+      "disclosure_integrity": 0,
+      "key_binding": 0,
+      "registration_purpose": 0,
+      "policy": 0,
+      "accept": 0
+    },
+    "revoked_credential": {
+      "format": 0,
+      "issuer_signature": 0,
+      "trust_path": 0,
+      "revocation": 4,
+      "disclosure_integrity": 0,
+      "key_binding": 0,
+      "registration_purpose": 0,
+      "policy": 0,
+      "accept": 0
+    },
+    "expired_credential": {
+      "format": 0,
+      "issuer_signature": 0,
+      "trust_path": 0,
+      "revocation": 0,
+      "disclosure_integrity": 0,
+      "key_binding": 0,
+      "registration_purpose": 0,
+      "policy": 4,
+      "accept": 0
+    },
+    "loa_below_requirement": {
+      "format": 0,
+      "issuer_signature": 0,
+      "trust_path": 0,
+      "revocation": 0,
+      "disclosure_integrity": 0,
+      "key_binding": 0,
+      "registration_purpose": 0,
+      "policy": 4,
+      "accept": 0
+    },
+    "claim_inconsistency": {
+      "format": 0,
+      "issuer_signature": 0,
+      "trust_path": 0,
+      "revocation": 0,
+      "disclosure_integrity": 0,
+      "key_binding": 0,
+      "registration_purpose": 0,
+      "policy": 4,
+      "accept": 0
+    },
+    "over_asking": {
+      "format": 0,
+      "issuer_signature": 0,
+      "trust_path": 0,
+      "revocation": 0,
+      "disclosure_integrity": 0,
+      "key_binding": 0,
+      "registration_purpose": 4,
+      "policy": 0,
+      "accept": 0
+    },
+    "cross_device_origin_phish": {
+      "format": 0,
+      "issuer_signature": 0,
+      "trust_path": 0,
+      "revocation": 0,
+      "disclosure_integrity": 0,
+      "key_binding": 4,
+      "registration_purpose": 0,
+      "policy": 0,
+      "accept": 0
+    }
+  },
+  "summary": {
+    "total": 56,
+    "apcer": 0.0,
+    "apcer_species": [
+      "broken_issuer_signature",
+      "altered_disclosed_claim",
+      "stripped_kb_jwt",
+      "wrong_audience_kb_jwt",
+      "stale_nonce_kb_jwt",
+      "issuer_not_on_trusted_list",
+      "revoked_credential",
+      "cross_device_origin_phish"
+    ],
+    "bpcer": 0.0,
+    "wrong_check_rate": 0.0,
+    "per_species": {
+      "genuine": {
+        "n": 8,
+        "caught": 0,
+        "missed": 0,
+        "wrong_check": 0,
+        "accepted_correctly": 8,
+        "false_reject": 0
+      },
+      "broken_issuer_signature": {
+        "n": 4,
+        "caught": 4,
+        "missed": 0,
+        "wrong_check": 0,
+        "accepted_correctly": 0,
+        "false_reject": 0
+      },
+      "altered_disclosed_claim": {
+        "n": 4,
+        "caught": 4,
+        "missed": 0,
+        "wrong_check": 0,
+        "accepted_correctly": 0,
+        "false_reject": 0
+      },
+      "stripped_kb_jwt": {
+        "n": 4,
+        "caught": 4,
+        "missed": 0,
+        "wrong_check": 0,
+        "accepted_correctly": 0,
+        "false_reject": 0
+      },
+      "wrong_audience_kb_jwt": {
+        "n": 4,
+        "caught": 4,
+        "missed": 0,
+        "wrong_check": 0,
+        "accepted_correctly": 0,
+        "false_reject": 0
+      },
+      "stale_nonce_kb_jwt": {
+        "n": 4,
+        "caught": 4,
+        "missed": 0,
+        "wrong_check": 0,
+        "accepted_correctly": 0,
+        "false_reject": 0
+      },
+      "issuer_not_on_trusted_list": {
+        "n": 4,
+        "caught": 4,
+        "missed": 0,
+        "wrong_check": 0,
+        "accepted_correctly": 0,
+        "false_reject": 0
+      },
+      "revoked_credential": {
+        "n": 4,
+        "caught": 4,
+        "missed": 0,
+        "wrong_check": 0,
+        "accepted_correctly": 0,
+        "false_reject": 0
+      },
+      "expired_credential": {
+        "n": 4,
+        "caught": 4,
+        "missed": 0,
+        "wrong_check": 0,
+        "accepted_correctly": 0,
+        "false_reject": 0
+      },
+      "loa_below_requirement": {
+        "n": 4,
+        "caught": 4,
+        "missed": 0,
+        "wrong_check": 0,
+        "accepted_correctly": 0,
+        "false_reject": 0
+      },
+      "claim_inconsistency": {
+        "n": 4,
+        "caught": 4,
+        "missed": 0,
+        "wrong_check": 0,
+        "accepted_correctly": 0,
+        "false_reject": 0
+      },
+      "over_asking": {
+        "n": 4,
+        "caught": 4,
+        "missed": 0,
+        "wrong_check": 0,
+        "accepted_correctly": 0,
+        "false_reject": 0
+      },
+      "cross_device_origin_phish": {
+        "n": 4,
+        "caught": 4,
+        "missed": 0,
+        "wrong_check": 0,
+        "accepted_correctly": 0,
+        "false_reject": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "eIDAS Wallet Lab",
+  "short_name": "eIDAS Wallet",
+  "description": "A PWA wallet holding a PID with a non-extractable WebCrypto key, WebAuthn-gated release, and real cross-device presentation to the Lara Bank verifier.",
+  "start_url": "/wallet/",
+  "scope": "/wallet/",
+  "display": "standalone",
+  "background_color": "#0B0F17",
+  "theme_color": "#7C3AED",
+  "icons": [
+    {
+      "src": "/icons/wallet.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": "anchor-swap-1.0",
+  "mutual_recognition": {
+    "total_items": 56,
+    "decision_mismatches": 0,
+    "items_with_differing_anchor_id": 44
+  },
+  "eu_only_issuer_scenario": {
+    "eu_decision": "accept",
+    "uk_decision": "reject",
+    "uk_failing_checks": [
+      "trust_path"
+    ]
+  }
+}

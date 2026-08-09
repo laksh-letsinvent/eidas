@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eidas.letsinvent.co.uk/schemas/eval_result-eval-1.0.json",
+  "title": "EvalResult",
+  "description": "Phase 3 corpus-scoring artefact (results/wallet_eval.json). New schema, separate from the frozen VerificationResult (wallet-1.0) — this describes a whole eval run, not a single presentation. Not a frozen contract: Phase 3 owns and can evolve it.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "seed", "generated_at", "corpus_size", "items", "matrix", "summary"],
+  "properties": {
+    "schema_version": { "const": "eval-1.0" },
+    "seed": { "type": "integer" },
+    "generated_at": { "type": "string", "minLength": 1 },
+    "corpus_size": { "type": "integer", "minimum": 1 },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "item_id",
+          "species",
+          "expected_decision",
+          "expected_check",
+          "actual_decision",
+          "actual_failing_checks",
+          "outcome_category",
+          "total_ms"
+        ],
+        "properties": {
+          "item_id": { "type": "string", "minLength": 1 },
+          "species": { "type": "string", "minLength": 1 },
+          "expected_decision": { "type": "string", "enum": ["accept", "reject"] },
+          "expected_check": {
+            "type": ["string", "null"],
+            "enum": [
+              "format", "issuer_signature", "trust_path", "revocation",
+              "disclosure_integrity", "key_binding", "registration_purpose", "policy", null
+            ]
+          },
+          "actual_decision": { "type": "string", "enum": ["accept", "reject"] },
+          "actual_failing_checks": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "outcome_category": {
+            "type": "string",
+            "enum": ["caught", "missed", "wrong_check", "accepted_correctly", "false_reject"]
+          },
+          "total_ms": { "type": "number", "minimum": 0 }
+        }
+      }
+    },
+    "matrix": {
+      "type": "object",
+      "description": "species -> {outcome_column: count}, where outcome_column is a check name or 'accept'.",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["total", "apcer", "apcer_species", "bpcer", "wrong_check_rate", "per_species"],
+      "properties": {
+        "total": { "type": "integer", "minimum": 0 },
+        "apcer": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "apcer_species": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "bpcer": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "wrong_check_rate": { "type": "number", "minimum": 0, "maximum": 1 },
+        "per_species": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["n", "caught", "missed", "wrong_check", "accepted_correctly", "false_reject"],
+            "properties": {
+              "n": { "type": "integer", "minimum": 0 },
+              "caught": { "type": "integer", "minimum": 0 },
+              "missed": { "type": "integer", "minimum": 0 },
+              "wrong_check": { "type": "integer", "minimum": 0 },
+              "accepted_correctly": { "type": "integer", "minimum": 0 },
+              "false_reject": { "type": "integer", "minimum": 0 }
+            }
+          }
+        }
+      }
+    }
+  }
+}
