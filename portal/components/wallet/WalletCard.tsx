@@ -18,6 +18,7 @@ export function WalletCard({ keyPair }: { keyPair: CryptoKeyPair | null }) {
   const [error, setError] = useState<string | null>(null);
   const [presenting, setPresenting] = useState(false);
   const [result, setResult] = useState<VerificationResult | null>(null);
+  const [presentation, setPresentation] = useState<string | null>(null);
   const [presentError, setPresentError] = useState<string | null>(null);
   const [unlockState, setUnlockState] = useState<UnlockState>("idle");
   const [unlockReason, setUnlockReason] = useState<string | null>(null);
@@ -75,6 +76,7 @@ export function WalletCard({ keyPair }: { keyPair: CryptoKeyPair | null }) {
         return;
       }
       setUnlockState("authorized");
+      setPresentation(outcome.presentation);
 
       const verificationResult = await postVerify(outcome.presentation, request);
       setResult(verificationResult as unknown as VerificationResult);
@@ -122,7 +124,7 @@ export function WalletCard({ keyPair }: { keyPair: CryptoKeyPair | null }) {
           </div>
           <UnlockGate state={unlockState} reason={unlockReason} />
           {presentError && <p className="text-xs text-[var(--reject)]">Presentation failed: {presentError}</p>}
-          {result && <VerificationResultView result={result} />}
+          {result && <VerificationResultView result={result} presentation={presentation ?? undefined} />}
         </div>
       )}
 

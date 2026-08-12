@@ -1,7 +1,9 @@
+import Link from "next/link";
 import { getAnchorSwap, getWalletEval, getWalletRedteam, OUTCOME_COLUMNS } from "@/lib/results";
 import { RatesChart } from "@/components/results/RatesChart";
+import { ESSAYS } from "@/lib/essays";
 
-export const metadata = { title: "Results — eIDAS Wallet & QES Lab" };
+export const metadata = { title: "Takeaway — eIDAS Wallet & QES Lab" };
 
 const ACCEPT_SHADES = ["", "bg-[var(--accept)]/10", "bg-[var(--accept)]/20", "bg-[var(--accept)]/30"];
 const ACCENT_SHADES = ["", "bg-[var(--accent-c)]/10", "bg-[var(--accent-c)]/20", "bg-[var(--accent-c)]/30"];
@@ -20,7 +22,7 @@ function cellClass(column: string, count: number): string {
   return shades[shadeIndex(count)];
 }
 
-export default function ResultsPage() {
+export default function TakeawayPage() {
   const evalResult = getWalletEval();
   const redteam = getWalletRedteam();
   const anchorSwap = getAnchorSwap();
@@ -35,7 +37,7 @@ export default function ResultsPage() {
           className="text-3xl font-bold tracking-tight"
           style={{ fontFamily: "var(--font-display)", color: "var(--foreground)" }}
         >
-          Results
+          Takeaway
         </h1>
         <p className="text-sm text-[var(--text-2)] mt-2 max-w-2xl">
           The eval: {evalResult.corpus_size}{" "}
@@ -257,6 +259,75 @@ export default function ResultsPage() {
           and framework, not in the schema. See{" "}
           <code className="font-mono text-xs">docs/TWO_POSTURE.md</code>.
         </p>
+      </section>
+
+      <section className="space-y-4">
+        <h2 className="text-lg font-semibold" style={{ fontFamily: "var(--font-display)" }}>
+          Key learnings
+        </h2>
+        <div className="space-y-4 max-w-2xl text-sm text-[var(--text-2)]">
+          <p>
+            <b className="text-[var(--foreground)]">Valid signature, trusted issuer and live credential are three
+            separate questions, not one.</b> A verifier that collapses them — that treats a passing signature check
+            as proof of accreditation, or accreditation as proof the credential hasn&apos;t since been revoked —
+            has a real gap even though every individual check it runs is correct. Six of the thirteen defect
+            species in this eval exist purely to test that a verifier keeps these separate; APCER is 0 across all
+            of them, but only because the checks are ordered and none is allowed to stand in for another.
+          </p>
+          <p>
+            <b className="text-[var(--foreground)]">The crypto core is AI-unbluffable; the policy layer isn&apos;t —
+            and selective disclosure is why.</b> The flagship finding: a red-team agent scored 0% against
+            signatures, digests and key-binding, and 50% against the policy layer, by withholding{" "}
+            <code className="font-mono text-xs">birth_date</code> while disclosing only{" "}
+            <code className="font-mono text-xs">age_over_18</code>. That isn&apos;t a bug in selective disclosure —
+            it&apos;s the credential doing exactly what it was designed to do, which is also exactly what removes
+            the verifier&apos;s ability to cross-check a derived claim against its source. A bank writing its own
+            attestation schemas inherits this trade-off on day one, not as an edge case discovered in production.
+          </p>
+          <p>
+            <b className="text-[var(--foreground)]">A verifier is its configuration as much as its code.</b> Seven
+            of the thirteen species live entirely in the verifier&apos;s trust list, registration scope or status
+            entries — an otherwise perfect presentation, rejected only because this deployment&apos;s config says
+            so. The confusion matrix has to be re-run against a bank&apos;s actual configuration, not assumed from
+            a vendor&apos;s reference deployment.
+          </p>
+          <p>
+            <b className="text-[var(--foreground)]">UK and EU are two trust postures, not one with a flag.</b> The
+            anchor swap (above) shows the mutual-recognition case is boring — same verifier, same decisions, only
+            the anchor label differs — which is exactly why the EU-only-issuer case matters: a bank running both
+            regimes needs two real registration and trust-resolution processes, because DIATF and eIDAS 2.0 solve
+            the same problem with trust anchors that don&apos;t currently talk to each other.
+          </p>
+          <p>
+            <b className="text-[var(--foreground)]">A browser wallet teaches the protocol; it can&apos;t clear the
+            certification bar.</b> The PWA holds a genuine non-extractable key, gates release behind a
+            real WebAuthn gesture, and completes a real cross-device presentation — none of it faked — and still
+            isn&apos;t a Wallet Unit, because the ARF&apos;s bar is a certified WSCD plus a Wallet Unit Attestation,
+            not a software promise about key export. See{" "}
+            <Link href="/experiment" className="underline">
+              the attestation wall
+            </Link>
+            .
+          </p>
+        </div>
+      </section>
+
+      <section className="space-y-3">
+        <h2 className="text-lg font-semibold" style={{ fontFamily: "var(--font-display)" }}>
+          Essays
+        </h2>
+        <div className="grid grid-cols-1 gap-3">
+          {ESSAYS.map((essay) => (
+            <Link
+              key={essay.slug}
+              href={`/essays/${essay.slug}`}
+              className="rounded-xl border border-[var(--border-c)] bg-[var(--surface)] p-4 hover:border-[var(--accent-c)] transition-colors"
+            >
+              <div className="text-sm font-semibold text-[var(--foreground)]">{essay.title}</div>
+              <div className="text-xs text-[var(--text-2)] mt-1">{essay.dek}</div>
+            </Link>
+          ))}
+        </div>
       </section>
     </div>
   );

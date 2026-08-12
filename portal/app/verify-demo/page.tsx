@@ -15,6 +15,7 @@ export default function VerifyDemoPage() {
   const [qrDataUrl, setQrDataUrl] = useState<string | null>(null);
   const [status, setStatus] = useState<"idle" | "waiting" | "verifying" | "done">("idle");
   const [result, setResult] = useState<VerificationResult | null>(null);
+  const [presentation, setPresentation] = useState<string | null>(null);
   const pollRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
@@ -39,6 +40,7 @@ export default function VerifyDemoPage() {
       if (presentation) {
         if (pollRef.current) clearInterval(pollRef.current);
         setStatus("verifying");
+        setPresentation(presentation);
         const verificationResult = await postVerify(presentation, req);
         setResult(verificationResult as unknown as VerificationResult);
         setStatus("done");
@@ -80,7 +82,7 @@ export default function VerifyDemoPage() {
 
       {status === "done" && result && (
         <div className="space-y-4">
-          <VerificationResultView result={result} />
+          <VerificationResultView result={result} presentation={presentation ?? undefined} />
           <Button variant="outline" onClick={startRequest}>
             Request another presentation
           </Button>

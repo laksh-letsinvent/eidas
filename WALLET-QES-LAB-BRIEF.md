@@ -10,7 +10,7 @@ Working names: **Need to Know** (wallet track — selective disclosure is the po
 
 By December 2027, every EU bank — including Lara Bank's Irish subsidiary — must accept EUDI Wallet credentials wherever it requires strong customer authentication. The UK is building the same capability on a different trust stack: GOV.UK Wallet issuing state credentials, DIATF/DVS-certified private providers verifying them. Both regimes make the bank a *relying party* whose core new component is a **verifier**: software that takes a credential presentation and decides accept/reject against a trust chain.
 
-Almost nobody in a bank product organisation can say what that verifier actually checks, byte by byte. Vendor pitches describe the wallet; regulation describes the obligation; neither describes the twelve distinct ways a presentation can be defective and what a correct verifier does about each. That gap is the learning target. Laksh's depth is in the biometric/IDV substrate; the credential/trust-chain substrate is currently book-knowledge. This project converts it to built-knowledge, the same way bio-authn did for matching and PAD.
+Almost nobody in a bank product organisation can say what that verifier actually checks, byte by byte. Vendor pitches describe the wallet; regulation describes the obligation; neither describes the thirteen distinct ways a presentation can be defective and what a correct verifier does about each. That gap is the learning target. Laksh's depth is in the biometric/IDV substrate; the credential/trust-chain substrate is currently book-knowledge. This project converts it to built-knowledge, the same way bio-authn did for matching and PAD.
 
 ## Why it exists (priority order)
 

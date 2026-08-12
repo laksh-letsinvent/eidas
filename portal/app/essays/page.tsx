@@ -17,7 +17,7 @@ export default function EssaysIndexPage() {
         <p className="text-sm text-[var(--text-2)] mt-2">
           Long-form write-ups off the back of the build — the eval discipline,
           the red-team&apos;s flagship finding, and the agentic-QES question
-          Phase 4 makes concrete.
+          the QES track makes concrete.
         </p>
       </div>
 

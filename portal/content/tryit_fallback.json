@@ -1,0 +1,646 @@
+{
+  "wallet": {
+    "vct": "eu.europa.ec.eudi.pid.1",
+    "disclosable_claim_count": 5
+  },
+  "bank": {
+    "presentation": "eyJhbGciOiJFUzI1NiIsInR5cCI6ImRjK3NkLWp3dCJ9.eyJpc3N1aW5nX2NvdW50cnkiOiJJRSIsImlzc3VpbmdfYXV0aG9yaXR5IjoiSUUgRGVwYXJ0bWVudCBvZiBQdWJsaWMgRXhwZW5kaXR1cmUsIE5EUCBEZWxpdmVyeSBhbmQgUmVmb3JtIiwiaXNzIjoiaHR0cHM6Ly9waWQtaXNzdWVyLmllLmVpZGFzLWxhYi5leGFtcGxlIiwidmN0IjoiZXUuZXVyb3BhLmVjLmV1ZGkucGlkLjEiLCJpYXQiOjE3ODY1NzAxMzcsImV4cCI6MTgxODEwNjEzNywiY25mIjp7Imp3ayI6eyJrdHkiOiJFQyIsImNydiI6IlAtMjU2IiwieCI6IkZwcExQWTRic2QyZzE2OEpTMWRYVF9vR0k0SHllbjhtRGFfc0ZORHFwUDAiLCJ5IjoiczRienNBUWRpTjZVYjUxYzc3bF80U1JKRUdlM29RUjlvWW11ZlZUMUNwZyJ9fSwiX3NkIjpbIkF6WjZwTnZDNlpLVTJnei1maWh5SlNCYV9XN1Y3T3hUNEdIR2pOQ1BtTjQiLCJQbmJwOFVtZXJqWm9UbWUteEw1bENHY3VNRGVNUTJzX3pfTHFUbGRkVEVjIiwiR0UtcWlhekxWRXpzMFg0amJBM2ZiODdhc01DcHluTHhobkpuQjVlaklURSIsIjB4ZU9XQUNYY24wUHoxc1pKTUdsX2c0WmF1YzNFNjJHd2JWMy1pUlJMUjQiLCJ6RWJ3SFVOenJDS1ZPQ2JqOVNCVVVBUWQxb0VUdENvam1QTWJtcm5Edl9nIl0sIl9zZF9hbGciOiJzaGEtMjU2In0.Np_HRDiY_v_WHxYUfGzFSNjh6yQzPFL-x6uKk3WbOX2ILTlYGW6m-XxO09oLxt-R69e3YadGIZ8rKHD9XRdEiQ~WyJvNWdoUmZqOEZ2T0RRTFJHQnJMZ1dBIiwibmF0aW9uYWxpdHkiLCJJRSJd~WyI2QUpjRVp3VmVjLUFabWJFOFBQUFZnIiwiYWdlX292ZXJfMTgiLHRydWVd~eyJhbGciOiJFUzI1NiIsInR5cCI6ImtiK2p3dCJ9.eyJpYXQiOjE3ODY1NzAxMzcsImF1ZCI6Imh0dHBzOi8vbGFyYWJhbmsuZXhhbXBsZS92ZXJpZnkiLCJub25jZSI6ImZhbGxiYWNrLW5vbmNlLWJhbmsiLCJzZF9oYXNoIjoiYy1GaUtZejlZa1VtbzFfWThwSUZUbDEzRmhjY185blRaVDY2eG9jV2VxNCJ9.tUGCAmN1YPx81q8f5lgllqqmv4V1gAK6FmOXbrUDl4K5GC2HhdT8Fo2sfBxmD_yOPgqIoBGL2WJEJcTvCA5Zaw",
+    "result": {
+      "schema_version": "wallet-1.0",
+      "presentation_id": "fallback-bank-001",
+      "decision": "accept",
+      "checks": [
+        {
+          "name": "format",
+          "result": "pass",
+          "detail": null
+        },
+        {
+          "name": "issuer_signature",
+          "result": "pass",
+          "detail": null
+        },
+        {
+          "name": "trust_path",
+          "result": "pass",
+          "detail": "anchor=eu-lab-anchor-1, tier=PID"
+        },
+        {
+          "name": "revocation",
+          "result": "pass",
+          "detail": null
+        },
+        {
+          "name": "disclosure_integrity",
+          "result": "pass",
+          "detail": null
+        },
+        {
+          "name": "key_binding",
+          "result": "pass",
+          "detail": null
+        },
+        {
+          "name": "registration_purpose",
+          "result": "pass",
+          "detail": null
+        },
+        {
+          "name": "policy",
+          "result": "pass",
+          "detail": null
+        }
+      ],
+      "trust": {
+        "tier": "PID",
+        "anchor_id": "eu-lab-anchor-1",
+        "loa": "high"
+      },
+      "policy_version": "lara-onboarding-v1",
+      "qes": null,
+      "timing": {
+        "total_ms": 0.2482081763446331
+      }
+    }
+  },
+  "age": {
+    "presentation": "eyJhbGciOiJFUzI1NiIsInR5cCI6ImRjK3NkLWp3dCJ9.eyJpc3N1aW5nX2NvdW50cnkiOiJJRSIsImlzc3VpbmdfYXV0aG9yaXR5IjoiSUUgRGVwYXJ0bWVudCBvZiBQdWJsaWMgRXhwZW5kaXR1cmUsIE5EUCBEZWxpdmVyeSBhbmQgUmVmb3JtIiwiaXNzIjoiaHR0cHM6Ly9waWQtaXNzdWVyLmllLmVpZGFzLWxhYi5leGFtcGxlIiwidmN0IjoiZXUuZXVyb3BhLmVjLmV1ZGkucGlkLjEiLCJpYXQiOjE3ODY1NzAxMzcsImV4cCI6MTgxODEwNjEzNywiY25mIjp7Imp3ayI6eyJrdHkiOiJFQyIsImNydiI6IlAtMjU2IiwieCI6ImJZMThwOFlxYVhVVjNQY1YtRnBhbkk3ZHVQMWF5dXlrLWktR2o2NTF4MU0iLCJ5IjoiS3llcFpsRDVzRXlvWXI1dzRHN0g3bVI5bXpZS3N3bDF2OEIyZkYtV3pCZyJ9fSwiX3NkIjpbIjgyOWRwM0FCX1p2WXBUR0JUeUtLYW52c1dsZjNpZTJuTDlGTXVPWFcyeWMiLCI2ZTlVRVZZSjlKWkJUem91Q1FZVFRCZjU2WkkyXzE5b0F6Zlg3X1pqb3M4IiwiMWd0SGpfQmhJU3dQVy1BWVh1V0hJeTRZSi1kbERaLVl4WkVFa3ZVRlY1RSIsIjJLczZsbDZxbHBEeTAwVEdLR0dQUG04N3h3LWRmRWUxbFExbDFWLW1iT3MiLCI2bUJXQzFPTy00azZXV2NJclhuR0Vxc3FZdkpLY1N1SzI1NDNGQVJRMHdBIl0sIl9zZF9hbGciOiJzaGEtMjU2In0.OnoWV8JOQu_rfZ6dOFYIG_-XxXplYjWMWF7pl2zGLHOomvxj0k0FxGcDta2vyA4Ym-CNACsUWtzXD1bxvY_FKg~WyJYaXFrV0xiMGtxVnlQc29qQUlwUmZRIiwiYWdlX292ZXJfMTgiLHRydWVd~eyJhbGciOiJFUzI1NiIsInR5cCI6ImtiK2p3dCJ9.eyJpYXQiOjE3ODY1NzAxMzcsImF1ZCI6Imh0dHBzOi8vbGFyYWJhbmsuZXhhbXBsZS92ZXJpZnkiLCJub25jZSI6ImZhbGxiYWNrLW5vbmNlLWFnZSIsInNkX2hhc2giOiJPX2dEYmJwRGJ4a3VtNXdpcEF5ZzBwOHdCaEdIamJGWHh4Q1ZCaHdRQ0Z3In0.PvER6wL4JFFJmObyMCDl5cr0AMniLO16l3HErae6HfvTmkAdpw2_6AUR2xoknEvTSKO8NMvIyZosiJ4dyQIwOw",
+    "result": {
+      "schema_version": "wallet-1.0",
+      "presentation_id": "fallback-age-001",
+      "decision": "accept",
+      "checks": [
+        {
+          "name": "format",
+          "result": "pass",
+          "detail": null
+        },
+        {
+          "name": "issuer_signature",
+          "result": "pass",
+          "detail": null
+        },
+        {
+          "name": "trust_path",
+          "result": "pass",
+          "detail": "anchor=eu-lab-anchor-1, tier=PID"
+        },
+        {
+          "name": "revocation",
+          "result": "pass",
+          "detail": null
+        },
+        {
+          "name": "disclosure_integrity",
+          "result": "pass",
+          "detail": null
+        },
+        {
+          "name": "key_binding",
+          "result": "pass",
+          "detail": null
+        },
+        {
+          "name": "registration_purpose",
+          "result": "pass",
+          "detail": null
+        },
+        {
+          "name": "policy",
+          "result": "pass",
+          "detail": null
+        }
+      ],
+      "trust": {
+        "tier": "PID",
+        "anchor_id": "eu-lab-anchor-1",
+        "loa": "high"
+      },
+      "policy_version": "lara-onboarding-v1",
+      "qes": null,
+      "timing": {
+        "total_ms": 0.21354085765779018
+      }
+    }
+  },
+  "phish": {
+    "presentation": "eyJhbGciOiJFUzI1NiIsInR5cCI6ImRjK3NkLWp3dCJ9.eyJpc3N1aW5nX2NvdW50cnkiOiJJRSIsImlzc3VpbmdfYXV0aG9yaXR5IjoiSUUgRGVwYXJ0bWVudCBvZiBQdWJsaWMgRXhwZW5kaXR1cmUsIE5EUCBEZWxpdmVyeSBhbmQgUmVmb3JtIiwiaXNzIjoiaHR0cHM6Ly9waWQtaXNzdWVyLmllLmVpZGFzLWxhYi5leGFtcGxlIiwidmN0IjoiZXUuZXVyb3BhLmVjLmV1ZGkucGlkLjEiLCJpYXQiOjE3ODY1NzAxMzcsImV4cCI6MTgxODEwNjEzNywiY25mIjp7Imp3ayI6eyJrdHkiOiJFQyIsImNydiI6IlAtMjU2IiwieCI6IlAyUjQ2WUUxQVhjMnY3b0gzM0hmNi1NTFhudVhhcTItS1ZyajczT3h6bW8iLCJ5IjoiT1VZUEdyaENzZ2RyUzZHdnFKWjVPdEQ3SWt3NTJFUHRHZzlqZVRZTTRpMCJ9fSwiX3NkIjpbIlJnbUU2Y09jUEhwbzUzUUo2REI5bXRHbmkweXpNYTQ0MExyVEt5d0RPQkUiLCJYdEp3VnF5bjFoUWNVNDhTT2hCYjhUMFdfaERrOUE4VTFHSzc2NDQtQmdjIiwicUVoRWxaOGxsS3RCdTZzNWFaVVkxUGdMNlRnV3c1VXdVRlE4aEk0Z1ByUSIsIkpGV0t2eW16WVNzY2xWUEtKYlNYYXBkNGU3SmJXOUVJazVUVXFOekdSZk0iLCJQVzdMdFFjZXVJb1BkX2E1bVBnQmV6WUg4LTQ2OVpjOUtxSTVpSHFiODFjIl0sIl9zZF9hbGciOiJzaGEtMjU2In0.e2NvjypcZTmrBtT_bNaKazsldgfbMhANAaKpUJ6lc6Z087Hg3HiwvtI5PF7DNeqdi5LvySn4OZZ7IP0OduCFBg~WyJMNlU5d2JsUEw1UG0wNDZTNWlaRHl3IiwibmF0aW9uYWxpdHkiLCJJRSJd~WyJ2TEZ0TXpIM2k3NjNSWGlmd3JER19BIiwiYWdlX292ZXJfMTgiLHRydWVd~eyJhbGciOiJFUzI1NiIsInR5cCI6ImtiK2p3dCJ9.eyJpYXQiOjE3ODY1NzAxMzcsImF1ZCI6Imh0dHBzOi8vbGFyYS1iYW5rLXNlY3VyZS52ZXJpZnktaWQuY28iLCJub25jZSI6ImZhbGxiYWNrLW5vbmNlLXBoaXNoIiwic2RfaGFzaCI6Img4OW9uZzFDYVhqWTY2S0w3X3dNU3pTa1dqTkxIbHM4endVZ0RRZ280M1EifQ.pBA4aFmD6NcZ7wKF8yWqk6SfUdO5jT9xpyEDv72GuX2s9CycrXb3OR6_VxgPiSUXa96mDu0AQgWlycqbxXLjXg",
+    "result": {
+      "schema_version": "wallet-1.0",
+      "presentation_id": "fallback-phish-001",
+      "decision": "reject",
+      "checks": [
+        {
+          "name": "format",
+          "result": "pass",
+          "detail": null
+        },
+        {
+          "name": "issuer_signature",
+          "result": "pass",
+          "detail": null
+        },
+        {
+          "name": "trust_path",
+          "result": "pass",
+          "detail": "anchor=eu-lab-anchor-1, tier=PID"
+        },
+        {
+          "name": "revocation",
+          "result": "pass",
+          "detail": null
+        },
+        {
+          "name": "disclosure_integrity",
+          "result": "pass",
+          "detail": null
+        },
+        {
+          "name": "key_binding",
+          "result": "fail",
+          "detail": "aud does not match this verifier"
+        },
+        {
+          "name": "registration_purpose",
+          "result": "skip",
+          "detail": "skipped after an earlier hard-gate failure"
+        },
+        {
+          "name": "policy",
+          "result": "skip",
+          "detail": "skipped after an earlier hard-gate failure"
+        }
+      ],
+      "trust": {
+        "tier": "PID",
+        "anchor_id": "eu-lab-anchor-1",
+        "loa": "high"
+      },
+      "policy_version": "lara-onboarding-v1",
+      "qes": null,
+      "timing": {
+        "total_ms": 0.20308303646743298
+      }
+    },
+    "phishing_origin": "https://lara-bank-secure.verify-id.co",
+    "real_verifier_id": "https://larabank.example/verify"
+  },
+  "species": {
+    "genuine": {
+      "description": "unmodified valid presentation, revealing ('age_over_18', 'nationality')",
+      "expected_decision": "accept",
+      "expected_check": null,
+      "presentation": "eyJhbGciOiJFUzI1NiIsInR5cCI6ImRjK3NkLWp3dCJ9.eyJpc3N1aW5nX2NvdW50cnkiOiJJRSIsImlzc3VpbmdfYXV0aG9yaXR5IjoiSUUgRGVwYXJ0bWVudCBvZiBQdWJsaWMgRXhwZW5kaXR1cmUsIE5EUCBEZWxpdmVyeSBhbmQgUmVmb3JtIiwiaXNzIjoiaHR0cHM6Ly9waWQtaXNzdWVyLmllLmVpZGFzLWxhYi5leGFtcGxlIiwidmN0IjoiZXUuZXVyb3BhLmVjLmV1ZGkucGlkLjEiLCJpYXQiOjE3ODY1NzAxMzcsImV4cCI6MTgxODEwNjEzNywiY25mIjp7Imp3ayI6eyJrdHkiOiJFQyIsImNydiI6IlAtMjU2IiwieCI6IllENXJCMHlKanBOWEdkX1o0UnYxMHJWYlVfNWZfY2hFOEVZTHZDY2R2RDAiLCJ5IjoiNV9JNUJCUEV6RDlORDlKVDc0endCX1ctR09FUWhXVi1qbzZFb1FYeUJtUSJ9fSwiX3NkIjpbInZScTdFODBiWFYtT3d3VHNSanRROHJZaGNfN3RvRE5PcEk5UkdjblE0ZE0iLCJnWUVfeVpDVTZLYnNMRzkyWi1CbWRBemNTS214dVA2Um1SV3dCMGFXRGpzIiwiaXMwd2FKU19OSzZWSjZlckcyVmlGQUswTVRwMWpQaTR3dGhRRnFMMUx6YyIsIm9tMFd6MkFPWXlQU19DZkVIMDEzYnl1R19qWDBRdF9mV2p5WHpYd0IyYVUiLCJCN0c4aDZCbjZ2a1NFNnVpRDVJcDJuRHhWLXFCRlpnWUFxNF92VEUzaTR3Il0sIl9zZF9hbGciOiJzaGEtMjU2In0.ViYyLbK4WhLTH5HIhiCm6phgtSK9zc8mxqQSUfOeM1uVcnH90afi6SQIreiG-qceBCuHBjNIiVV7UYbeH3cW2A~WyJDN2V6S0RHb014UDgxN2RHd24zNXF3IiwibmF0aW9uYWxpdHkiLCJJRSJd~WyJSeXk2dmVvTzFCSDItTVhNTllTNVF3IiwiYWdlX292ZXJfMTgiLHRydWVd~eyJhbGciOiJFUzI1NiIsInR5cCI6ImtiK2p3dCJ9.eyJpYXQiOjE3ODY1NzAxMzcsImF1ZCI6Imh0dHBzOi8vbGFyYWJhbmsuZXhhbXBsZS92ZXJpZnkiLCJub25jZSI6InZlcmlmaWVyLW5vbmNlLTkwMDAiLCJzZF9oYXNoIjoialQ0UFdTc0hUTUJKeFo3MkF4ZWtzVXhFXzRraXAtZGc2eW1hamlOaG5RYyJ9.qWJXxGr_nhXVE64FAV0N2uUyTyScJWZ3Tfz4kly7uo0uEzaW35Dd_zvZX9DbvpJpnEBqOHaqPJU1iYTR6gK4xg",
+      "request": {
+        "verifier_id": "https://larabank.example/verify",
+        "nonce": "verifier-nonce-9000",
+        "query": {
+          "vct": "eu.europa.ec.eudi.pid.1",
+          "required_claims": [
+            "age_over_18",
+            "nationality"
+          ],
+          "required_tier": "PID",
+          "required_loa": "high"
+        }
+      },
+      "result": {
+        "schema_version": "wallet-1.0",
+        "presentation_id": "fallback-genuine-001",
+        "decision": "accept",
+        "checks": [
+          {
+            "name": "format",
+            "result": "pass",
+            "detail": null
+          },
+          {
+            "name": "issuer_signature",
+            "result": "pass",
+            "detail": null
+          },
+          {
+            "name": "trust_path",
+            "result": "pass",
+            "detail": "anchor=eu-lab-anchor-1, tier=PID"
+          },
+          {
+            "name": "revocation",
+            "result": "pass",
+            "detail": null
+          },
+          {
+            "name": "disclosure_integrity",
+            "result": "pass",
+            "detail": null
+          },
+          {
+            "name": "key_binding",
+            "result": "pass",
+            "detail": null
+          },
+          {
+            "name": "registration_purpose",
+            "result": "pass",
+            "detail": null
+          },
+          {
+            "name": "policy",
+            "result": "pass",
+            "detail": null
+          }
+        ],
+        "trust": {
+          "tier": "PID",
+          "anchor_id": "eu-lab-anchor-1",
+          "loa": "high"
+        },
+        "policy_version": "lara-onboarding-v1",
+        "qes": null,
+        "timing": {
+          "total_ms": 0.24233409203588963
+        }
+      }
+    },
+    "broken_issuer_signature": {
+      "description": "one bit flipped in the issuer JWT signature; payload/disclosures unchanged",
+      "expected_decision": "reject",
+      "expected_check": "issuer_signature",
+      "presentation": "eyJhbGciOiJFUzI1NiIsInR5cCI6ImRjK3NkLWp3dCJ9.eyJpc3N1aW5nX2NvdW50cnkiOiJJRSIsImlzc3VpbmdfYXV0aG9yaXR5IjoiSUUgRGVwYXJ0bWVudCBvZiBQdWJsaWMgRXhwZW5kaXR1cmUsIE5EUCBEZWxpdmVyeSBhbmQgUmVmb3JtIiwiaXNzIjoiaHR0cHM6Ly9waWQtaXNzdWVyLmllLmVpZGFzLWxhYi5leGFtcGxlIiwidmN0IjoiZXUuZXVyb3BhLmVjLmV1ZGkucGlkLjEiLCJpYXQiOjE3ODY1NzAxMzcsImV4cCI6MTgxODEwNjEzNywiY25mIjp7Imp3ayI6eyJrdHkiOiJFQyIsImNydiI6IlAtMjU2IiwieCI6IllENXJCMHlKanBOWEdkX1o0UnYxMHJWYlVfNWZfY2hFOEVZTHZDY2R2RDAiLCJ5IjoiNV9JNUJCUEV6RDlORDlKVDc0endCX1ctR09FUWhXVi1qbzZFb1FYeUJtUSJ9fSwiX3NkIjpbInZScTdFODBiWFYtT3d3VHNSanRROHJZaGNfN3RvRE5PcEk5UkdjblE0ZE0iLCJnWUVfeVpDVTZLYnNMRzkyWi1CbWRBemNTS214dVA2Um1SV3dCMGFXRGpzIiwiaXMwd2FKU19OSzZWSjZlckcyVmlGQUswTVRwMWpQaTR3dGhRRnFMMUx6YyIsIm9tMFd6MkFPWXlQU19DZkVIMDEzYnl1R19qWDBRdF9mV2p5WHpYd0IyYVUiLCJCN0c4aDZCbjZ2a1NFNnVpRDVJcDJuRHhWLXFCRlpnWUFxNF92VEUzaTR3Il0sIl9zZF9hbGciOiJzaGEtMjU2In0.aDfWCmZjdGy_BR0DrNzZ4FyZPYdBFxCS9jpDcqP2yYyELX1djpQfbgWX1hxpkaffPgmWlWoE8TDjfdkMaSiI_Q~WyJDN2V6S0RHb014UDgxN2RHd24zNXF3IiwibmF0aW9uYWxpdHkiLCJJRSJd~WyJSeXk2dmVvTzFCSDItTVhNTllTNVF3IiwiYWdlX292ZXJfMTgiLHRydWVd~eyJhbGciOiJFUzI1NiIsInR5cCI6ImtiK2p3dCJ9.eyJpYXQiOjE3ODY1NzAxMzcsImF1ZCI6Imh0dHBzOi8vbGFyYWJhbmsuZXhhbXBsZS92ZXJpZnkiLCJub25jZSI6InZlcmlmaWVyLW5vbmNlLTkwMDAiLCJzZF9oYXNoIjoibkZwQWp5RkdaTEY2X1k1MmUwb3F3c3pXU0NKc1Jvd2pJRVA0RUJuellXWSJ9.9ZdYErXRxSB0M3yJETpKwKfsLHWMy2rMg_0OpqGoC6oNcIq9ClCMoR7hy1o1SkFTWXKVbhx0_netWlFoCjmO5Q",
+      "request": {
+        "verifier_id": "https://larabank.example/verify",
+        "nonce": "verifier-nonce-9000",
+        "query": {
+          "vct": "eu.europa.ec.eudi.pid.1",
+          "required_claims": [
+            "age_over_18",
+            "nationality"
+          ],
+          "required_tier": "PID",
+          "required_loa": "high"
+        }
+      },
+      "result": {
+        "schema_version": "wallet-1.0",
+        "presentation_id": "fallback-broken_issuer_signature-001",
+        "decision": "reject",
+        "checks": [
+          {
+            "name": "format",
+            "result": "pass",
+            "detail": null
+          },
+          {
+            "name": "issuer_signature",
+            "result": "fail",
+            "detail": "issuer JWT signature does not verify"
+          },
+          {
+            "name": "trust_path",
+            "result": "skip",
+            "detail": "skipped after an earlier hard-gate failure"
+          },
+          {
+            "name": "revocation",
+            "result": "skip",
+            "detail": "skipped after an earlier hard-gate failure"
+          },
+          {
+            "name": "disclosure_integrity",
+            "result": "skip",
+            "detail": "skipped after an earlier hard-gate failure"
+          },
+          {
+            "name": "key_binding",
+            "result": "skip",
+            "detail": "skipped after an earlier hard-gate failure"
+          },
+          {
+            "name": "registration_purpose",
+            "result": "skip",
+            "detail": "skipped after an earlier hard-gate failure"
+          },
+          {
+            "name": "policy",
+            "result": "skip",
+            "detail": "skipped after an earlier hard-gate failure"
+          }
+        ],
+        "trust": {
+          "tier": null,
+          "anchor_id": null,
+          "loa": null
+        },
+        "policy_version": "lara-onboarding-v1",
+        "qes": null,
+        "timing": {
+          "total_ms": 0.1202498096972704
+        }
+      }
+    },
+    "altered_disclosed_claim": {
+      "description": "claim 'nationality' changed to 'XX'; disclosure digest no longer matches signed _sd entry",
+      "expected_decision": "reject",
+      "expected_check": "disclosure_integrity",
+      "presentation": "eyJhbGciOiJFUzI1NiIsInR5cCI6ImRjK3NkLWp3dCJ9.eyJpc3N1aW5nX2NvdW50cnkiOiJJRSIsImlzc3VpbmdfYXV0aG9yaXR5IjoiSUUgRGVwYXJ0bWVudCBvZiBQdWJsaWMgRXhwZW5kaXR1cmUsIE5EUCBEZWxpdmVyeSBhbmQgUmVmb3JtIiwiaXNzIjoiaHR0cHM6Ly9waWQtaXNzdWVyLmllLmVpZGFzLWxhYi5leGFtcGxlIiwidmN0IjoiZXUuZXVyb3BhLmVjLmV1ZGkucGlkLjEiLCJpYXQiOjE3ODY1NzAxMzcsImV4cCI6MTgxODEwNjEzNywiY25mIjp7Imp3ayI6eyJrdHkiOiJFQyIsImNydiI6IlAtMjU2IiwieCI6IllENXJCMHlKanBOWEdkX1o0UnYxMHJWYlVfNWZfY2hFOEVZTHZDY2R2RDAiLCJ5IjoiNV9JNUJCUEV6RDlORDlKVDc0endCX1ctR09FUWhXVi1qbzZFb1FYeUJtUSJ9fSwiX3NkIjpbInZScTdFODBiWFYtT3d3VHNSanRROHJZaGNfN3RvRE5PcEk5UkdjblE0ZE0iLCJnWUVfeVpDVTZLYnNMRzkyWi1CbWRBemNTS214dVA2Um1SV3dCMGFXRGpzIiwiaXMwd2FKU19OSzZWSjZlckcyVmlGQUswTVRwMWpQaTR3dGhRRnFMMUx6YyIsIm9tMFd6MkFPWXlQU19DZkVIMDEzYnl1R19qWDBRdF9mV2p5WHpYd0IyYVUiLCJCN0c4aDZCbjZ2a1NFNnVpRDVJcDJuRHhWLXFCRlpnWUFxNF92VEUzaTR3Il0sIl9zZF9hbGciOiJzaGEtMjU2In0.smjBU6XMcWdTqbsdtdSb7Exvev5eVia4jMN8Bg7X4hI5TQB3eFgfAUsrdiTrXniylmGNDOHZBCL3R--JnWavxg~WyJDN2V6S0RHb014UDgxN2RHd24zNXF3IiwibmF0aW9uYWxpdHkiLCJYWCJd~WyJSeXk2dmVvTzFCSDItTVhNTllTNVF3IiwiYWdlX292ZXJfMTgiLHRydWVd~eyJhbGciOiJFUzI1NiIsInR5cCI6ImtiK2p3dCJ9.eyJpYXQiOjE3ODY1NzAxMzcsImF1ZCI6Imh0dHBzOi8vbGFyYWJhbmsuZXhhbXBsZS92ZXJpZnkiLCJub25jZSI6InZlcmlmaWVyLW5vbmNlLTkwMDAiLCJzZF9oYXNoIjoiY0M3dDhueURJQlVCenNmZXVFY3pydjkxcjBSRWoxUW1mRVNBS2I3XzBxNCJ9.7X3lcqHon56Mk4RukS29Jyv030L0A-O9-vzr7_ZWy4KB7vR0J71LwAaamZ41pKxhc1LBH_zVK_Plq5n-nd8w3Q",
+      "request": {
+        "verifier_id": "https://larabank.example/verify",
+        "nonce": "verifier-nonce-9000",
+        "query": {
+          "vct": "eu.europa.ec.eudi.pid.1",
+          "required_claims": [
+            "age_over_18",
+            "nationality"
+          ],
+          "required_tier": "PID",
+          "required_loa": "high"
+        }
+      },
+      "result": {
+        "schema_version": "wallet-1.0",
+        "presentation_id": "fallback-altered_disclosed_claim-001",
+        "decision": "reject",
+        "checks": [
+          {
+            "name": "format",
+            "result": "pass",
+            "detail": null
+          },
+          {
+            "name": "issuer_signature",
+            "result": "pass",
+            "detail": null
+          },
+          {
+            "name": "trust_path",
+            "result": "pass",
+            "detail": "anchor=eu-lab-anchor-1, tier=PID"
+          },
+          {
+            "name": "revocation",
+            "result": "pass",
+            "detail": null
+          },
+          {
+            "name": "disclosure_integrity",
+            "result": "fail",
+            "detail": "disclosure(s) do not match signed digests: ['nationality']"
+          },
+          {
+            "name": "key_binding",
+            "result": "skip",
+            "detail": "skipped after an earlier hard-gate failure"
+          },
+          {
+            "name": "registration_purpose",
+            "result": "skip",
+            "detail": "skipped after an earlier hard-gate failure"
+          },
+          {
+            "name": "policy",
+            "result": "skip",
+            "detail": "skipped after an earlier hard-gate failure"
+          }
+        ],
+        "trust": {
+          "tier": "PID",
+          "anchor_id": "eu-lab-anchor-1",
+          "loa": "high"
+        },
+        "policy_version": "lara-onboarding-v1",
+        "qes": null,
+        "timing": {
+          "total_ms": 0.10466598905622959
+        }
+      }
+    },
+    "stripped_kb_jwt": {
+      "description": "KB-JWT removed; credential now presented with no holder-binding proof at all",
+      "expected_decision": "reject",
+      "expected_check": "key_binding",
+      "presentation": "eyJhbGciOiJFUzI1NiIsInR5cCI6ImRjK3NkLWp3dCJ9.eyJpc3N1aW5nX2NvdW50cnkiOiJJRSIsImlzc3VpbmdfYXV0aG9yaXR5IjoiSUUgRGVwYXJ0bWVudCBvZiBQdWJsaWMgRXhwZW5kaXR1cmUsIE5EUCBEZWxpdmVyeSBhbmQgUmVmb3JtIiwiaXNzIjoiaHR0cHM6Ly9waWQtaXNzdWVyLmllLmVpZGFzLWxhYi5leGFtcGxlIiwidmN0IjoiZXUuZXVyb3BhLmVjLmV1ZGkucGlkLjEiLCJpYXQiOjE3ODY1NzAxMzcsImV4cCI6MTgxODEwNjEzNywiY25mIjp7Imp3ayI6eyJrdHkiOiJFQyIsImNydiI6IlAtMjU2IiwieCI6IllENXJCMHlKanBOWEdkX1o0UnYxMHJWYlVfNWZfY2hFOEVZTHZDY2R2RDAiLCJ5IjoiNV9JNUJCUEV6RDlORDlKVDc0endCX1ctR09FUWhXVi1qbzZFb1FYeUJtUSJ9fSwiX3NkIjpbInZScTdFODBiWFYtT3d3VHNSanRROHJZaGNfN3RvRE5PcEk5UkdjblE0ZE0iLCJnWUVfeVpDVTZLYnNMRzkyWi1CbWRBemNTS214dVA2Um1SV3dCMGFXRGpzIiwiaXMwd2FKU19OSzZWSjZlckcyVmlGQUswTVRwMWpQaTR3dGhRRnFMMUx6YyIsIm9tMFd6MkFPWXlQU19DZkVIMDEzYnl1R19qWDBRdF9mV2p5WHpYd0IyYVUiLCJCN0c4aDZCbjZ2a1NFNnVpRDVJcDJuRHhWLXFCRlpnWUFxNF92VEUzaTR3Il0sIl9zZF9hbGciOiJzaGEtMjU2In0.DF0kuYlTC7xMoPwvk39gKwGEb3-NVjUZUDqaRBRTqJWNRiqZxy9kCzzgPAJGrITgzl9GvEVjen0QBNrpEPuOBg~WyJDN2V6S0RHb014UDgxN2RHd24zNXF3IiwibmF0aW9uYWxpdHkiLCJJRSJd~WyJSeXk2dmVvTzFCSDItTVhNTllTNVF3IiwiYWdlX292ZXJfMTgiLHRydWVd~",
+      "request": {
+        "verifier_id": "https://larabank.example/verify",
+        "nonce": "verifier-nonce-9000",
+        "query": {
+          "vct": "eu.europa.ec.eudi.pid.1",
+          "required_claims": [
+            "age_over_18",
+            "nationality"
+          ],
+          "required_tier": "PID",
+          "required_loa": "high"
+        }
+      },
+      "result": {
+        "schema_version": "wallet-1.0",
+        "presentation_id": "fallback-stripped_kb_jwt-001",
+        "decision": "reject",
+        "checks": [
+          {
+            "name": "format",
+            "result": "pass",
+            "detail": null
+          },
+          {
+            "name": "issuer_signature",
+            "result": "pass",
+            "detail": null
+          },
+          {
+            "name": "trust_path",
+            "result": "pass",
+            "detail": "anchor=eu-lab-anchor-1, tier=PID"
+          },
+          {
+            "name": "revocation",
+            "result": "pass",
+            "detail": null
+          },
+          {
+            "name": "disclosure_integrity",
+            "result": "pass",
+            "detail": null
+          },
+          {
+            "name": "key_binding",
+            "result": "fail",
+            "detail": "no KB-JWT present"
+          },
+          {
+            "name": "registration_purpose",
+            "result": "skip",
+            "detail": "skipped after an earlier hard-gate failure"
+          },
+          {
+            "name": "policy",
+            "result": "skip",
+            "detail": "skipped after an earlier hard-gate failure"
+          }
+        ],
+        "trust": {
+          "tier": "PID",
+          "anchor_id": "eu-lab-anchor-1",
+          "loa": "high"
+        },
+        "policy_version": "lara-onboarding-v1",
+        "qes": null,
+        "timing": {
+          "total_ms": 0.09749992750585079
+        }
+      }
+    },
+    "expired_credential": {
+      "description": "credential exp=1786483737 is in the past; everything else about it verifies cleanly",
+      "expected_decision": "reject",
+      "expected_check": "policy",
+      "presentation": "eyJhbGciOiJFUzI1NiIsInR5cCI6ImRjK3NkLWp3dCJ9.eyJpc3N1aW5nX2NvdW50cnkiOiJJRSIsImlzc3VpbmdfYXV0aG9yaXR5IjoiSUUgRGVwYXJ0bWVudCBvZiBQdWJsaWMgRXhwZW5kaXR1cmUsIE5EUCBEZWxpdmVyeSBhbmQgUmVmb3JtIiwiaXNzIjoiaHR0cHM6Ly9waWQtaXNzdWVyLmllLmVpZGFzLWxhYi5leGFtcGxlIiwidmN0IjoiZXUuZXVyb3BhLmVjLmV1ZGkucGlkLjEiLCJpYXQiOjE3ODY1NzAxMzcsImV4cCI6MTc4NjQ4MzczNywiY25mIjp7Imp3ayI6eyJrdHkiOiJFQyIsImNydiI6IlAtMjU2IiwieCI6IllENXJCMHlKanBOWEdkX1o0UnYxMHJWYlVfNWZfY2hFOEVZTHZDY2R2RDAiLCJ5IjoiNV9JNUJCUEV6RDlORDlKVDc0endCX1ctR09FUWhXVi1qbzZFb1FYeUJtUSJ9fSwiX3NkIjpbInZScTdFODBiWFYtT3d3VHNSanRROHJZaGNfN3RvRE5PcEk5UkdjblE0ZE0iLCJnWUVfeVpDVTZLYnNMRzkyWi1CbWRBemNTS214dVA2Um1SV3dCMGFXRGpzIiwiaXMwd2FKU19OSzZWSjZlckcyVmlGQUswTVRwMWpQaTR3dGhRRnFMMUx6YyIsIm9tMFd6MkFPWXlQU19DZkVIMDEzYnl1R19qWDBRdF9mV2p5WHpYd0IyYVUiLCJCN0c4aDZCbjZ2a1NFNnVpRDVJcDJuRHhWLXFCRlpnWUFxNF92VEUzaTR3Il0sIl9zZF9hbGciOiJzaGEtMjU2In0.HlWWpOVCHZ23PpBrTfKNeksgckzY3mB-lYpyQDwi2WiTrnZDP9KeUSfw33EKiLpNcMBFW5P8IU_odDiE3sRUtg~WyJDN2V6S0RHb014UDgxN2RHd24zNXF3IiwibmF0aW9uYWxpdHkiLCJJRSJd~WyJSeXk2dmVvTzFCSDItTVhNTllTNVF3IiwiYWdlX292ZXJfMTgiLHRydWVd~eyJhbGciOiJFUzI1NiIsInR5cCI6ImtiK2p3dCJ9.eyJpYXQiOjE3ODY1NzAxMzcsImF1ZCI6Imh0dHBzOi8vbGFyYWJhbmsuZXhhbXBsZS92ZXJpZnkiLCJub25jZSI6InZlcmlmaWVyLW5vbmNlLTkwMDAiLCJzZF9oYXNoIjoiRkFKT19TMzZLT2E1aEV5T3J2aUczeHhEeHU1REMzaXc4QzR0OWhsRmJEYyJ9.LwMWaQRIXPmi9kX90TZkTJGNLUEBJZCiYiupugahOWPfqGTTVuyPR-vspoolIpY_byPG48cPY7d6k7rYjgJQhA",
+      "request": {
+        "verifier_id": "https://larabank.example/verify",
+        "nonce": "verifier-nonce-9000",
+        "query": {
+          "vct": "eu.europa.ec.eudi.pid.1",
+          "required_claims": [
+            "age_over_18",
+            "nationality"
+          ],
+          "required_tier": "PID",
+          "required_loa": "high"
+        }
+      },
+      "result": {
+        "schema_version": "wallet-1.0",
+        "presentation_id": "fallback-expired_credential-001",
+        "decision": "reject",
+        "checks": [
+          {
+            "name": "format",
+            "result": "pass",
+            "detail": null
+          },
+          {
+            "name": "issuer_signature",
+            "result": "pass",
+            "detail": null
+          },
+          {
+            "name": "trust_path",
+            "result": "pass",
+            "detail": "anchor=eu-lab-anchor-1, tier=PID"
+          },
+          {
+            "name": "revocation",
+            "result": "pass",
+            "detail": null
+          },
+          {
+            "name": "disclosure_integrity",
+            "result": "pass",
+            "detail": null
+          },
+          {
+            "name": "key_binding",
+            "result": "pass",
+            "detail": null
+          },
+          {
+            "name": "registration_purpose",
+            "result": "pass",
+            "detail": null
+          },
+          {
+            "name": "policy",
+            "result": "fail",
+            "detail": "credential expired at exp=1786483737 (now=1786570137)"
+          }
+        ],
+        "trust": {
+          "tier": "PID",
+          "anchor_id": "eu-lab-anchor-1",
+          "loa": "high"
+        },
+        "policy_version": "lara-onboarding-v1",
+        "qes": null,
+        "timing": {
+          "total_ms": 0.2039591781795025
+        }
+      }
+    },
+    "cross_device_origin_phish": {
+      "description": "cross-device QR relayed through a phishing origin; KB-JWT aud binds to the phishing site, not the real verifier",
+      "expected_decision": "reject",
+      "expected_check": "key_binding",
+      "presentation": "eyJhbGciOiJFUzI1NiIsInR5cCI6ImRjK3NkLWp3dCJ9.eyJpc3N1aW5nX2NvdW50cnkiOiJJRSIsImlzc3VpbmdfYXV0aG9yaXR5IjoiSUUgRGVwYXJ0bWVudCBvZiBQdWJsaWMgRXhwZW5kaXR1cmUsIE5EUCBEZWxpdmVyeSBhbmQgUmVmb3JtIiwiaXNzIjoiaHR0cHM6Ly9waWQtaXNzdWVyLmllLmVpZGFzLWxhYi5leGFtcGxlIiwidmN0IjoiZXUuZXVyb3BhLmVjLmV1ZGkucGlkLjEiLCJpYXQiOjE3ODY1NzAxMzcsImV4cCI6MTgxODEwNjEzNywiY25mIjp7Imp3ayI6eyJrdHkiOiJFQyIsImNydiI6IlAtMjU2IiwieCI6IllENXJCMHlKanBOWEdkX1o0UnYxMHJWYlVfNWZfY2hFOEVZTHZDY2R2RDAiLCJ5IjoiNV9JNUJCUEV6RDlORDlKVDc0endCX1ctR09FUWhXVi1qbzZFb1FYeUJtUSJ9fSwiX3NkIjpbInZScTdFODBiWFYtT3d3VHNSanRROHJZaGNfN3RvRE5PcEk5UkdjblE0ZE0iLCJnWUVfeVpDVTZLYnNMRzkyWi1CbWRBemNTS214dVA2Um1SV3dCMGFXRGpzIiwiaXMwd2FKU19OSzZWSjZlckcyVmlGQUswTVRwMWpQaTR3dGhRRnFMMUx6YyIsIm9tMFd6MkFPWXlQU19DZkVIMDEzYnl1R19qWDBRdF9mV2p5WHpYd0IyYVUiLCJCN0c4aDZCbjZ2a1NFNnVpRDVJcDJuRHhWLXFCRlpnWUFxNF92VEUzaTR3Il0sIl9zZF9hbGciOiJzaGEtMjU2In0.IMn9NjgXFm9bddoo4azvvjVrwQlEDW1H9SX-x4PPan8ZIrHg-qQlCWKpmWeUk8qd2Qr7qyIcz8KgonDJsCIIIA~WyJDN2V6S0RHb014UDgxN2RHd24zNXF3IiwibmF0aW9uYWxpdHkiLCJJRSJd~WyJSeXk2dmVvTzFCSDItTVhNTllTNVF3IiwiYWdlX292ZXJfMTgiLHRydWVd~eyJhbGciOiJFUzI1NiIsInR5cCI6ImtiK2p3dCJ9.eyJpYXQiOjE3ODY1NzAxMzcsImF1ZCI6Imh0dHBzOi8vcGhpc2hpbmctcmVsYXkuZXhhbXBsZSIsIm5vbmNlIjoidmVyaWZpZXItbm9uY2UtOTAwMCIsInNkX2hhc2giOiJuTWFDS0g1LWJWanEzVVRRdHFTeGZfc0JNUXpGRkdpYVNVNTg0aXlTTWQ4In0.Wb942c6m1ztXpIi7kVjIzwfyNxnyYc92BxyToLyuP7w58GrO9Rmc48RPHIiXrTBoNiKzSlBw7kTWsxG-guqppQ",
+      "request": {
+        "verifier_id": "https://larabank.example/verify",
+        "nonce": "verifier-nonce-9000",
+        "query": {
+          "vct": "eu.europa.ec.eudi.pid.1",
+          "required_claims": [
+            "age_over_18",
+            "nationality"
+          ],
+          "required_tier": "PID",
+          "required_loa": "high"
+        }
+      },
+      "result": {
+        "schema_version": "wallet-1.0",
+        "presentation_id": "fallback-cross_device_origin_phish-001",
+        "decision": "reject",
+        "checks": [
+          {
+            "name": "format",
+            "result": "pass",
+            "detail": null
+          },
+          {
+            "name": "issuer_signature",
+            "result": "pass",
+            "detail": null
+          },
+          {
+            "name": "trust_path",
+            "result": "pass",
+            "detail": "anchor=eu-lab-anchor-1, tier=PID"
+          },
+          {
+            "name": "revocation",
+            "result": "pass",
+            "detail": null
+          },
+          {
+            "name": "disclosure_integrity",
+            "result": "pass",
+            "detail": null
+          },
+          {
+            "name": "key_binding",
+            "result": "fail",
+            "detail": "aud does not match this verifier"
+          },
+          {
+            "name": "registration_purpose",
+            "result": "skip",
+            "detail": "skipped after an earlier hard-gate failure"
+          },
+          {
+            "name": "policy",
+            "result": "skip",
+            "detail": "skipped after an earlier hard-gate failure"
+          }
+        ],
+        "trust": {
+          "tier": "PID",
+          "anchor_id": "eu-lab-anchor-1",
+          "loa": "high"
+        },
+        "policy_version": "lara-onboarding-v1",
+        "qes": null,
+        "timing": {
+          "total_ms": 0.20345905795693398
+        }
+      }
+    }
+  }
+}

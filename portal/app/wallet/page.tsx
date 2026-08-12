@@ -38,7 +38,7 @@ export default function WalletPage() {
         <p className="text-sm text-[var(--text-2)] mt-2">
           A PWA holding a PID with a non-extractable WebCrypto key, gated by
           WebAuthn, presenting over a real (if local) OpenID4VP-lite channel
-          to the Lara Bank verifier from Phase 2.
+          to the Lara Bank verifier.
         </p>
         <div className="mt-4">
           <InstallPrompt />

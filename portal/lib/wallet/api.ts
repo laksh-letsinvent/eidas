@@ -25,6 +25,21 @@ async function postJson<T>(path: string, body?: unknown): Promise<T> {
   return response.json() as Promise<T>;
 }
 
+/** Try It's service-availability probe (BUILD_PROMPT_PHASE7-9.md Phase 9) —
+ * a short-timeout GET so a visitor without the local service running sees
+ * a quiet fallback instead of a slow failed fetch per story. */
+export async function checkServiceHealth(timeoutMs = 1500): Promise<boolean> {
+  try {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), timeoutMs);
+    const response = await fetch(`${BASE_URL}/health`, { signal: controller.signal });
+    clearTimeout(timer);
+    return response.ok;
+  } catch {
+    return false;
+  }
+}
+
 export function fetchCredentialOffer(): Promise<CredentialOfferResponse> {
   return postJson<CredentialOfferResponse>("/credential-offer");
 }

@@ -6,18 +6,16 @@ import { useState, useSyncExternalStore } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import {
   Menu, Sun, Moon, Monitor,
-  BookOpen, Map, Workflow, FlaskConical, BarChart2,
-  Zap, FileText, Wallet,
+  Map, Workflow, FlaskConical, BarChart2,
+  Zap, FileText, Fingerprint,
 } from "lucide-react";
 
 const EIDAS_NAV = [
-  { href: "/",           label: "The Experiment", icon: BookOpen },
+  { href: "/",           label: "How this works", icon: Workflow },
   { href: "/atlas",      label: "Atlas",          icon: Map },
-  { href: "/in-action",  label: "In Action",      icon: Workflow },
-  { href: "/try-it",     label: "Try It",         icon: FlaskConical },
-  { href: "/results",    label: "Results",        icon: BarChart2 },
-  { href: "/essays",     label: "Essays",         icon: FileText },
-  { href: "/wallet",     label: "Wallet",         icon: Wallet,       badge: "new" },
+  { href: "/experiment", label: "The Experiment", icon: FlaskConical },
+  { href: "/try-it",     label: "Try It",         icon: Zap },
+  { href: "/takeaway",   label: "Takeaway",       icon: BarChart2 },
 ];
 
 const BRAND = {
@@ -49,11 +47,6 @@ function NavLinks({ pathname, onClick }: { pathname: string; onClick?: () => voi
           >
             <Icon size={15} className={active ? "text-[var(--accent-c)]" : "text-[var(--text-2)]"} />
             <span className="flex-1">{item.label}</span>
-            {"badge" in item && item.badge && (
-              <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-[var(--info-zone)] text-[var(--accent-c)] font-mono">
-                {item.badge}
-              </span>
-            )}
           </Link>
         );
       })}
@@ -64,7 +57,7 @@ function NavLinks({ pathname, onClick }: { pathname: string; onClick?: () => voi
           href="https://bio-authn.letsinvent.co.uk"
           className="flex items-center gap-3 px-3 py-2 rounded-lg text-xs text-[var(--text-3)] hover:text-[var(--text-2)] hover:bg-[var(--surface-2)] transition-all"
         >
-          <Zap size={12} className="shrink-0" />
+          <Fingerprint size={12} className="shrink-0" />
           <span>Face Value →</span>
         </a>
         <a

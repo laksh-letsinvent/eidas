@@ -1,0 +1,91 @@
+{
+  "chain": {
+    "root": "CN=eIDAS Lab Root CA,O=eIDAS Lab,C=IE",
+    "qtsp": "CN=eIDAS Lab QTSP,O=eIDAS Lab,C=IE",
+    "signer": "CN=eIDAS Lab QES Signer,O=eIDAS Lab,C=IE",
+    "tsa": "CN=eIDAS Lab TSA,O=eIDAS Lab,C=IE"
+  },
+  "blank_pdf_bytes": 662,
+  "signed_pdf_bytes": 15837,
+  "happy_result": {
+    "signature_valid": true,
+    "chain_trusted": true,
+    "document_unmodified": true,
+    "timestamp_valid": true,
+    "is_qualified": true,
+    "anchor_id": "eidas-lab-qtsp-root-1",
+    "detail": null
+  },
+  "experiments": [
+    {
+      "species": "document_modified_after_signing",
+      "description": "a page was inserted via a second incremental update after the signature was applied",
+      "expected_field": "document_unmodified",
+      "result": {
+        "signature_valid": true,
+        "chain_trusted": true,
+        "document_unmodified": false,
+        "timestamp_valid": true,
+        "is_qualified": true,
+        "anchor_id": "eidas-lab-qtsp-root-1",
+        "detail": "the document was modified after the signature was applied"
+      }
+    },
+    {
+      "species": "signature_from_revoked_cert",
+      "description": "signed with a certificate whose serial is on the revoked set",
+      "expected_field": "chain_trusted",
+      "result": {
+        "signature_valid": true,
+        "chain_trusted": false,
+        "document_unmodified": true,
+        "timestamp_valid": true,
+        "is_qualified": true,
+        "anchor_id": null,
+        "detail": "signing certificate is on the revoked set"
+      }
+    },
+    {
+      "species": "missing_or_forged_timestamp",
+      "description": "signed with no timestamper \u2014 no timestamp token embedded at all",
+      "expected_field": "timestamp_valid",
+      "result": {
+        "signature_valid": true,
+        "chain_trusted": true,
+        "document_unmodified": true,
+        "timestamp_valid": null,
+        "is_qualified": true,
+        "anchor_id": "eidas-lab-qtsp-root-1",
+        "detail": "no timestamp present"
+      }
+    },
+    {
+      "species": "chain_to_untrusted_ca",
+      "description": "signed by a certificate chaining to a root that isn't a registered trust anchor",
+      "expected_field": "chain_trusted",
+      "result": {
+        "signature_valid": true,
+        "chain_trusted": false,
+        "document_unmodified": true,
+        "timestamp_valid": true,
+        "is_qualified": true,
+        "anchor_id": null,
+        "detail": "certificate chain does not resolve to a trusted anchor"
+      }
+    },
+    {
+      "species": "advanced_not_qualified_cert_as_qes",
+      "description": "signed with an Advanced (AES) certificate \u2014 no qcStatements extension \u2014 everything else clean",
+      "expected_field": "is_qualified",
+      "result": {
+        "signature_valid": true,
+        "chain_trusted": true,
+        "document_unmodified": true,
+        "timestamp_valid": true,
+        "is_qualified": false,
+        "anchor_id": "eidas-lab-qtsp-root-1",
+        "detail": "certificate is Advanced (AES), not Qualified (QES) \u2014 no qcStatements extension"
+      }
+    }
+  ]
+}
