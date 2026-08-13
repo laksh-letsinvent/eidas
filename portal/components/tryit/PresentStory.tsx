@@ -107,7 +107,7 @@ export function PresentStory({
         </div>
       )}
 
-      {error && <p className="text-xs text-[var(--reject)]">{error}. Is the verifier service running?</p>}
+      {error && <p className="text-xs text-[var(--reject)]">{error}.</p>}
 
       {result && (
         <div className="space-y-2">

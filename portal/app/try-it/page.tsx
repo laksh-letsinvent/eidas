@@ -19,18 +19,22 @@ export default function TryItPage() {
           Try It
         </h1>
         <p className="text-sm text-[var(--text-2)] mt-2">
-          Four of the walkthrough&apos;s stories, run live against the real verifier in{" "}
-          <code className="font-mono text-xs px-1 py-0.5 rounded bg-[var(--surface-2)]">service/</code> — a genuine
-          non-extractable browser key, a real WebAuthn gate, the real eight-check ladder. Then six defect species
-          broken live inside the same bank story, and a recorded QES run. Needs{" "}
-          <code className="font-mono text-xs px-1 py-0.5 rounded bg-[var(--surface-2)]">
-            uvicorn service.main:app --port 8420
-          </code>{" "}
-          running locally — see{" "}
+          Four of the walkthrough&apos;s stories, put through the real verifier — the
+          claims that travelled, the claims that stayed on the phone, and the
+          eight-check ladder that decided. Then six ways the same bank story can
+          go wrong on the wire, and a qualified signature with its five
+          break-it experiments.
+        </p>
+        <p className="text-sm text-[var(--text-2)] mt-3">
+          Every result here is real output, not a mock. Runs marked{" "}
+          <span className="font-medium text-[var(--foreground)]">recorded</span>{" "}
+          were produced by the same verifier ahead of time — the live path needs
+          a local service that isn&apos;t part of this site. Clone the repo and
+          the same screens run against your own wallet; see{" "}
           <Link href="/experiment" className="underline">
             The Experiment
           </Link>{" "}
-          for what falls back when it isn&apos;t.
+          for what was built.
         </p>
       </div>
 
